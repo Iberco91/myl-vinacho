@@ -1,3 +1,11 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'  // Esto busca App.jsx en la carpeta src
+import React from 'react'
+
+function App() {
+  return (
+    <>
+      {/* Este componente queda vacío para no interferir con tu HTML manual */}
+    </>
+  )
+}
+
+export default App
