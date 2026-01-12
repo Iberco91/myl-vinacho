@@ -1,0 +1,106 @@
+/* ELEMENTOS   */
+
+/* RESET: Quita márgenes raros y hace que el tamaño sea fácil de calcular */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Fundamental para que el padding no rompa tus anchos */
+  background-color: rgb(42, 78, 55); /* Tu verde oscuro */
+}
+
+/* ENLACES: Limpieza básica */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* BASE: Estilos que quieres que hereden todas las páginas */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  color: white;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+footer {
+    border-top: 1px solid white; /* Grosor, estilo (sólido) y color (gris oscuro) */
+    color: #ffffff;
+    margin-inline: 4%;
+    margin-top: 50px;           /* Espacio entre la línea y las imágenes de arriba */
+    padding: 10px 20px 20px 20px;
+    text-align: center;
+}
+
+footer h4 {
+    margin-top: 20px;
+}
+
+footer li {
+  list-style: none;
+}
+
+
+h1 {
+  font-family: Helvetica;
+  font-size: 65px;
+  font-weight: bold;
+  color:rgb(245, 218, 218);
+  text-align: center;
+}
+
+header {
+  display: flex;             /* Convierte el header en un contenedor flexible */
+  justify-content: space-between; /* Empuja las imágenes a los extremos y el h1 al centro */
+  align-items: center;       /* Alinea perfectamente los tres elementos por su centro horizontal */
+  padding: 10px 20px;
+}
+
+nav ul li {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Se ve más profesional en menús */
+    font-size: 1.3rem;
+}
+
+nav ul li:hover {
+    color: #ffcc00d3; /* El color que prefieras, por ejemplo un dorado/amarillo */
+    transition: 0.3s; /* Esto hace que el cambio no sea brusco, sino suave */
+}
+
+
+/* CLASES */
+
+
+.footer-content {
+  margin top: 10px;
+}
+
+.imag-equipos {
+  display: grid;     /* Esto crea 3 columnas del mismo tamaño (1 fracción cada una) */
+  grid-template-columns: repeat(3, 1fr);  /* Espacio entre las cartas */
+  gap: 20px;  /* Centra la cuadrícula en la pantalla */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.imag {
+  width: 100%;      /* La imagen ocupa todo el ancho de su celda de la rejilla */
+  height: auto;     /* Mantiene la proporción de la carta */
+  border-radius: 8px; /* Opcional: le da ese toque de "carta" redondeada */
+}
+
+.imagenes-titulo {
+  height: 150px;
+  width: 150px;
+  margin: 0 30px;
+}
+
+.secciones {
+  display: flex;             /* Pone los li uno al lado del otro */
+  justify-content: center;    /* Los centra debajo del título */
+  list-style: none;          /* Quita los puntos */
+  gap: 30px;                 /* Espacio entre cada opción */
+  padding: 20px 0;
+}
