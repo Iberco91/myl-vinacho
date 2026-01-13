@@ -20,7 +20,7 @@ html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   width: 100%;
-  overflow-x: hidden; /* ¡VITAL! Evita que el celular se mueva hacia los lados */
+  overflow-x: clip; /* ¡VITAL! Evita que el celular se mueva hacia los lados */
 }
 
 footer {
