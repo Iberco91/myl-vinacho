@@ -69,9 +69,6 @@ nav ul li:hover {
 }
 
 
-/* CLASES */
-
-
 
 .divs-imagenes {
   border-radius: 26px;
@@ -155,17 +152,16 @@ nav ul li:hover {
   }
 }
 
-Aquí tienes la combinación exacta. He integrado la desaparición de la imagen derecha y el ajuste de espacio para el título dentro de tu estructura original.
-
-Copia y reemplaza tu bloque de 768px por este:
-
-CSS
-
 /* --- 3. CELULARES (768px hacia abajo) --- */
 @media (max-width: 768px) {
     /* OCULTAR IMAGEN DERECHA: Evita que el iPhone se corte a los lados */
-    header .imagenes-titulo:nth-of-type(2) {
-        display: none;
+    header .imagenes-titulo:last-of-type {
+        display: none !important;
+        visibility: hidden;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     /* AJUSTE HEADER: Centramos la imagen izquierda y el título */
@@ -176,6 +172,8 @@ CSS
         align-items: center;
         gap: 10px;
         width: 100% !important;
+        max-width: 100vw; /* Evita que crezca más que la pantalla */
+        overflow: hidden; /* Corta cualquier cosa que intente salir */
         padding: 15px;
     }
 
