@@ -68,6 +68,7 @@ h1 {
   font-weight: bold;
   color:rgb(245, 218, 218);
   text-align: center;
+  z-index: 100;
 }
 
 header {
@@ -75,6 +76,12 @@ header {
   justify-content: space-between; /* Empuja las imágenes a los extremos y el h1 al centro */
   align-items: center;       /* Alinea perfectamente los tres elementos por su centro horizontal */
   padding: 10px 20px;
+  position: sticky;
+  z-index: 100;
+}
+
+aside {
+  position: sticky;
 }
 
 nav ul li {
