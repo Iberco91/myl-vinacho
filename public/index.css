@@ -154,28 +154,30 @@ nav ul li:hover {
 
 /* --- 3. CELULARES (768px hacia abajo) --- */
 @media (max-width: 768px) {
-    /* OCULTAR IMAGEN DERECHA: Evita que el iPhone se corte a los lados */
+/* 1. La imagen izquierda: La mantenemos visible y fija */
+    header .imagenes-titulo:first-of-type {
+        display: block !important;
+        width: 60px; 
+        height: auto;
+        margin: 0;
+    }
+
     header .imagenes-titulo:last-of-type {
-        display: none !important;
-        visibility: hidden;
-        width: 0 !important;
-        height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        visibility: hidden !important; 
+        width: 60px; /* Mismo ancho que la izquierda para equilibrar */
+        height: auto;
+        margin: 0;
     }
 
     /* AJUSTE HEADER: Centramos la imagen izquierda y el título */
     header {
-        display: flex !important;
-        flex-direction: row !important; /* Mantenemos horizontal pero con más espacio */
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        width: 100% !important;
-        max-width: 100vw; /* Evita que crezca más que la pantalla */
-        overflow: hidden; /* Corta cualquier cosa que intente salir */
-        padding: 15px;
-    }
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between; /* Empuja imagen e 'imagen fantasma' a los lados */
+            align-items: center;
+            width: 100% !important;
+            padding: 10px 15px;
+        }
 
     .imagenes-titulo {
         width: 70px; /* Tamaño reducido para iPhone */
@@ -185,8 +187,10 @@ nav ul li:hover {
 
     h1 {
         font-size: 1.6rem !important; /* Título más compacto */
-        text-align: left;
+        text-align: center;
         flex: 1;
+        margin: 0;
+        padding: 0 5px;
     }
 
     /* MENÚ VERTICAL: Tu configuración original */
