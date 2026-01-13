@@ -86,6 +86,7 @@ aside {
   position: sticky;
   top: 102px;        /* ¡OJO! Aquí pones la altura aproximada de tu header */
   z-index: 999;     /* Un poco menos que el header */
+  display: block;
 }
 
 nav ul li {
