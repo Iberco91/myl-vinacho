@@ -118,67 +118,61 @@ nav ul li:hover {
 }
 
 
-/* Media query para el responsivo */
-/* --- 1. TABLETS Y CELULARES GRANDES (Menos de 900px) --- */
+/* --- 1. TABLETS (1030px hacia abajo) --- */
 @media (max-width: 1030px) {
     .secciones {
-        flex-wrap: wrap;       /* Permite que las palabras bajen a una segunda fila si no caben */
-        gap: 15px;             /* Reducimos el espacio entre opciones (estaba en 30px) */
+        flex-wrap: wrap; 
+        gap: 15px;
         justify-content: center;
         padding: 10px;
     }
-
     nav ul li {
-        font-size: 1.1rem;     /* Achicamos un poco la letra (estaba en 1.3rem) */
+        font-size: 1.1rem;
     }
 }
+
+/* --- 2. MONITORES PEQUEÑOS/TABLETS (900px hacia abajo) --- */
 @media (max-width: 900px) {
   .imag-equipos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 15px; /* Espacio entre cartas */
+    gap: 15px;
     width: 100%;
   }
-
   .divs-imagenes {
     width: 45%; 
     min-width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
 
-/* --- 2. CELULARES MEDIANOS / IPHONE (Menos de 768px) --- */
+/* --- 3. CELULARES (768px hacia abajo) --- */
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem; /* Un poco más grande para que no se vea tan minúsculo */
         text-align: center;
     }
     
     header, footer, section {
         width: 100% !important;
-        box-sizing: border-box;
-        padding: 15px; /* Evita que el texto toque los bordes físicos del celu */
+        padding: 15px;
     }
 
-    /* Ajustamos el menú si tienes uno */
-    nav ul {
-        flex-direction: column;
+    /* FORZAMOS EL MENÚ A COLUMNA */
+    .secciones {
+        flex-direction: column !important; /* El !important asegura que gane a la regla de 1030px */
         align-items: center;
+        gap: 10px;
     }
 }
 
-/* --- 3. CELULARES PEQUEÑOS (Menos de 480px) --- */
+/* --- 4. CELULARES PEQUEÑOS (480px hacia abajo) --- */
 @media (max-width: 480px) {
   .divs-imagenes {
-    width: 90%; /* Una sola columna casi total */
-    margin: 0 auto; /* Obliga al centrado manual */
+    width: 90% !important; 
+    margin: 0 auto;
   }
-
   .imag {
-      height: 280px; /* Un poco más bajas para que no ocupen toda la pantalla */
+      height: 280px; 
   }
 }
