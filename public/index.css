@@ -155,16 +155,52 @@ nav ul li:hover {
   }
 }
 
+Aquí tienes la combinación exacta. He integrado la desaparición de la imagen derecha y el ajuste de espacio para el título dentro de tu estructura original.
+
+Copia y reemplaza tu bloque de 768px por este:
+
+CSS
+
 /* --- 3. CELULARES (768px hacia abajo) --- */
 @media (max-width: 768px) {
-    /* Aquí el menú ya pasa a ser una lista vertical (Columna) */
+    /* OCULTAR IMAGEN DERECHA: Evita que el iPhone se corte a los lados */
+    header .imagenes-titulo:nth-of-type(2) {
+        display: none;
+    }
+
+    /* AJUSTE HEADER: Centramos la imagen izquierda y el título */
+    header {
+        display: flex !important;
+        flex-direction: row !important; /* Mantenemos horizontal pero con más espacio */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100% !important;
+        padding: 15px;
+    }
+
+    .imagenes-titulo {
+        width: 70px; /* Tamaño reducido para iPhone */
+        height: auto;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.6rem !important; /* Título más compacto */
+        text-align: left;
+        flex: 1;
+    }
+
+    /* MENÚ VERTICAL: Tu configuración original */
     .secciones {
         flex-direction: column !important;
         align-items: center;
         gap: 10px;
+        padding: 10px 0;
     }
 
-    header, footer, section {
+    /* GENERAL */
+    footer, section {
         width: 100% !important;
         padding: 15px;
     }
