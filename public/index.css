@@ -70,22 +70,24 @@ h1 {
   text-align: center;
 }
 
+.contenedor-fijo {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(42, 78, 55);
+    width: 100%;
+}
+
 header {
   background-color: rgb(42, 78, 55);
   display: flex;             /* Convierte el header en un contenedor flexible */
   justify-content: space-between; /* Empuja las imágenes a los extremos y el h1 al centro */
   align-items: center;       /* Alinea perfectamente los tres elementos por su centro horizontal */
   padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 aside {
   background-color: rgb(42, 78, 55); /* También debe tener fondo */
-  position: sticky;
-  top: 102px;        /* ¡OJO! Aquí pones la altura aproximada de tu header */
-  z-index: 999;     /* Un poco menos que el header */
   display: block;
 }
 
