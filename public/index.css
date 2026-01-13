@@ -71,6 +71,7 @@ h1 {
 }
 
 header {
+  background-color: rgb(42, 78, 55);
   display: flex;             /* Convierte el header en un contenedor flexible */
   justify-content: space-between; /* Empuja las imágenes a los extremos y el h1 al centro */
   align-items: center;       /* Alinea perfectamente los tres elementos por su centro horizontal */
