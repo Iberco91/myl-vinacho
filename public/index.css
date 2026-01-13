@@ -77,13 +77,14 @@ header {
   padding: 10px 20px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 aside {
+  background-color: rgb(42, 78, 55); /* También debe tener fondo */
   position: sticky;
-  z-index: 100;
-  top: 0;
+  top: 102px;        /* ¡OJO! Aquí pones la altura aproximada de tu header */
+  z-index: 999;     /* Un poco menos que el header */
 }
 
 nav ul li {
