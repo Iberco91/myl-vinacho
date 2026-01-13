@@ -72,6 +72,16 @@ nav ul li:hover {
 /* CLASES */
 
 
+
+.divs-imagenes {
+  border-radius: 26px;
+  display: flex;
+  flex-direction: column; /* Alinea los elementos uno debajo del otro */
+  align-items: center;    /* Centra todo horizontalmente (el h3 y la img) */
+  justify-content: center; /* Centra verticalmente si sobra espacio */
+  text-align: center;     /* Centra el texto por si el nombre tiene dos líneas */
+} 
+
 .footer-content {
   margin top: 10px;
 }
@@ -87,8 +97,10 @@ nav ul li:hover {
 
 .imag {
   width: 100%;      /* La imagen ocupa todo el ancho de su celda de la rejilla */
-  height: auto;     /* Mantiene la proporción de la carta */
-  border-radius: 8px; /* Opcional: le da ese toque de "carta" redondeada */
+  height: 480px;          /* ALTURA FIJA: Cambia este número a tu gusto */
+  border-radius: 20px; /* Opcional: le da ese toque de "carta" redondeada */
+  object-fit: contain;      /* MAGIA: Recorta la foto para que llene el espacio sin estirarse */
+  object-position: center; /* Centra el recorte para no cortar cabezas */
 }
 
 .imagenes-titulo {
@@ -103,4 +115,24 @@ nav ul li:hover {
   list-style: none;          /* Quita los puntos */
   gap: 30px;                 /* Espacio entre cada opción */
   padding: 20px 0;
+}
+
+/* Media query para el responsivo */
+@media (max-width: 900px) { /* Se activa en tablets y celulares */
+  .imag-equipos {
+    display: flex;         /* Cambiamos de Grid a Flex */
+    flex-wrap: wrap;       /* Para que bajen las cartas */
+    justify-content: center; /* Para que las cartas queden centradas */
+  }
+
+  .divs-imagenes {
+    width: 45%;           /* Para que quepan 2 cartas por fila */
+    min-width: 150px;     /* Para que no se encojan de más */
+  }
+}
+
+@media (max-width: 480px) { /* Para celulares muy pequeños */
+  .divs-imagenes {
+    width: 90%;           /* Una sola carta grande por fila */
+  }
 }
