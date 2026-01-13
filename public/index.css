@@ -22,7 +22,9 @@ html, body {
   width: 100%;
   overflow-x: hidden; /* ¡VITAL! Evita que el celular se mueva hacia los lados */
 }
-
+footer {
+  text-align: center;
+}
 footer {
     border-top: 1px solid white; /* Grosor, estilo (sólido) y color (gris oscuro) */
     color: #ffffff;
@@ -150,6 +152,9 @@ nav ul li:hover {
     width: 45%; 
     min-width: 150px;
   }
+  footer {
+  text-align: center;
+  } 
 }
 
 /* --- 3. CELULARES (768px hacia abajo) --- */
@@ -179,6 +184,10 @@ nav ul li:hover {
             padding: 10px 15px;
         }
 
+    footer {
+      text-align: center;
+    }
+    
     .imagenes-titulo {
         width: 70px; /* Tamaño reducido para iPhone */
         height: auto;
@@ -205,6 +214,7 @@ nav ul li:hover {
     footer, section {
         width: 100% !important;
         padding: 15px;
+        text-align: center;
     }
 }
 
@@ -219,5 +229,8 @@ nav ul li:hover {
   }
   h1 {
       font-size: 1.6rem !important; /* Un poco más pequeño para los más chiquitos */
+  }
+  footer {
+  text-align: center;
   }
 }
