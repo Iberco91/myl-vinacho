@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Fundamental para que el padding no rompa tus anchos */
-  background-color: rgb(42, 78, 55); /* Tu verde oscuro */
 }
 
 /* ENLACES: Limpieza básica */
@@ -15,12 +14,13 @@ a {
 }
 
 /* BASE: Estilos que quieres que hereden todas las páginas */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+html, body {
+  background-color: rgb(42, 78, 55); /* Tu verde oscuro solo aquí */
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden; /* ¡VITAL! Evita que el celular se mueva hacia los lados */
 }
 
 footer {
