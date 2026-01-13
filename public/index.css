@@ -117,22 +117,56 @@ nav ul li:hover {
   padding: 20px 0;
 }
 
+
 /* Media query para el responsivo */
-@media (max-width: 900px) { /* Se activa en tablets y celulares */
+/* --- 1. TABLETS Y CELULARES GRANDES (Menos de 900px) --- */
+@media (max-width: 900px) {
   .imag-equipos {
-    display: flex;         /* Cambiamos de Grid a Flex */
-    flex-wrap: wrap;       /* Para que bajen las cartas */
-    justify-content: center; /* Para que las cartas queden centradas */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espacio entre cartas */
+    width: 100%;
   }
 
   .divs-imagenes {
-    width: 45%;           /* Para que quepan 2 cartas por fila */
-    min-width: 150px;     /* Para que no se encojan de más */
+    width: 45%; 
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-@media (max-width: 480px) { /* Para celulares muy pequeños */
+/* --- 2. CELULARES MEDIANOS / IPHONE (Menos de 768px) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    header, footer, section {
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 15px; /* Evita que el texto toque los bordes físicos del celu */
+    }
+
+    /* Ajustamos el menú si tienes uno */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --- 3. CELULARES PEQUEÑOS (Menos de 480px) --- */
+@media (max-width: 480px) {
   .divs-imagenes {
-    width: 90%;           /* Una sola carta grande por fila */
+    width: 90%; /* Una sola columna casi total */
+    margin: 0 auto; /* Obliga al centrado manual */
+  }
+
+  .imag {
+      height: 280px; /* Un poco más bajas para que no ocupen toda la pantalla */
   }
 }
