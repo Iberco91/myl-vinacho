@@ -1,0 +1,236 @@
+/* 1. RESET Y BASE */
+
+/*Quita márgenes raros y hace que el tamaño sea fácil de calcular */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Fundamental para que el padding no rompa tus anchos */
+}
+
+/*Enlaces: Limpieza básica */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Estilos que quieres que hereden todas las páginas */
+html, body {
+  background-color: rgb(42, 78, 55); /* Tu verde oscuro solo aquí */
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: clip; /* ¡VITAL! Evita que el celular se mueva hacia los lados */
+}
+
+
+/* 2. LAYOUT FIJO (Lo que se repite) */
+
+.contenedor-fijo {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(42, 78, 55);
+    width: 100%;
+}
+
+header {
+  background-color: rgb(42, 78, 55);
+  display: flex;             /* Convierte el header en un contenedor flexible */
+  justify-content: space-between; /* Empuja las imágenes a los extremos y el h1 al centro */
+  align-items: center;       /* Alinea perfectamente los tres elementos por su centro horizontal */
+  padding: 10px 20px;
+}
+
+aside {
+  background-color: rgb(42, 78, 55); /* También debe tener fondo */
+  display: block;
+}
+
+.imagenes-titulo {
+  height: 150px;
+  width: 150px;
+  margin: 0 30px;
+}
+
+h1 {
+  font-family: Helvetica;
+  font-size: 65px;
+  font-weight: bold;
+  color:rgb(245, 218, 218);
+  text-align: center;
+}
+
+
+/* 3. NAVEGACIÓN */
+
+.secciones {
+  display: flex;             /* Pone los li uno al lado del otro */
+  justify-content: center;    /* Los centra debajo del título */
+  list-style: none;          /* Quita los puntos */
+  gap: 30px;                 /* Espacio entre cada opción */
+  padding: 20px 0;
+}
+
+nav ul li {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Se ve más profesional en menús */
+    font-size: 1.3rem;
+}
+
+nav ul li:hover {
+    color: #ffcc00d3; /* El color que prefieras, por ejemplo un dorado/amarillo */
+    transition: 0.3s; /* Esto hace que el cambio no sea brusco, sino suave */
+}
+
+
+/* 4. FOOTER */
+
+footer {
+    /* Quitamos el border-top físico para que no dependa del ancho del bloque */
+    color: #ffffff;
+    margin-top: 50px;
+    /* Eliminamos el margin-inline del 4% que te lo descentraba */
+    margin-inline: 0; 
+    padding: 30px 20px 20px 20px; /* Un poco más de padding arriba para la línea */
+    text-align: center;
+    width: 100%;
+    position: relative; /* Necesario para ubicar la nueva línea */
+}
+
+/* ESTA ES TU NUEVA LÍNEA BLANCA CENTRADA Y CORTA */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 4%;  /* Esto hace que empiece un poco después del borde izquierdo */
+    right: 4%; /* Esto hace que termine un poco antes del borde derecho */
+    height: 1px;
+    background-color: white;
+}
+
+footer h4 {
+    margin-top: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0 !important; 
+    margin: 0 auto; /* Asegura que la lista se quede en el centro */
+    width: 100%;
+}
+
+footer li {
+    list-style: none;
+    width: 100%;
+}
+
+.footer-content {
+  margin-top: 10px;
+}
+
+
+
+/* 5. MEDIA QUERIES GLOBALES (Solo de Header y Nav) */
+
+/* --- 1. TABLETS Y PANTALLAS PLEGABLES (1100px hacia abajo) --- */
+/* Esto cubre iPad Air, Asus Zenbook Fold y laptops pequeñas */
+@media (max-width: 1100px) {
+    .secciones {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 12px; 
+        padding: 10px;
+        width: 100%;
+    }
+
+    nav ul li {
+        font-size: 1rem; /* Letra más pequeña para que quepa en dos filas */
+    }
+
+    h1 {
+        /* Tamaño fluido: mínimo 1.8rem, máximo 3.5rem */
+        font-size: clamp(1.8rem, 6vw, 3.5rem) !important;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+}
+
+/* --- 2. MONITORES PEQUEÑOS/TABLETS (900px hacia abajo) --- */
+@media (max-width: 900px) {
+  footer {
+  text-align: center;
+  } 
+}
+
+/* --- 3. CELULARES (768px hacia abajo) --- */
+@media (max-width: 768px) {
+/* 1. La imagen izquierda: La mantenemos visible y fija */
+    header .imagenes-titulo:first-of-type {
+        display: block !important;
+        width: 60px; 
+        height: auto;
+        margin: 0;
+    }
+
+    header .imagenes-titulo:last-of-type {
+        visibility: hidden !important; 
+        width: 60px; /* Mismo ancho que la izquierda para equilibrar */
+        height: auto;
+        margin: 0;
+    }
+
+    /* AJUSTE HEADER: Centramos la imagen izquierda y el título */
+    header {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between; /* Empuja imagen e 'imagen fantasma' a los lados */
+            align-items: center;
+            width: 100% !important;
+            padding: 10px 15px;
+        }
+        
+    .imagenes-titulo {
+        width: 70px; /* Tamaño reducido para iPhone */
+        height: auto;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.6rem !important; /* Título más compacto */
+        text-align: center;
+        flex: 1;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    /* MENÚ VERTICAL: Tu configuración original */
+    .secciones {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    /* GENERAL */
+    footer, section {
+        width: 100% !important;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+/* --- 4. CELULARES PEQUEÑOS (480px hacia abajo) --- */
+@media (max-width: 480px) {
+  .divs-imagenes {
+    width: 90% !important; 
+    margin: 0 auto;
+  }
+  .imag {
+      height: 280px; 
+  }
+  h1 {
+      font-size: 1.6rem !important; /* Un poco más pequeño para los más chiquitos */
+  }
+}
