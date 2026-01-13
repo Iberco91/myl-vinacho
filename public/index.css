@@ -22,26 +22,45 @@ html, body {
   width: 100%;
   overflow-x: hidden; /* ¡VITAL! Evita que el celular se mueva hacia los lados */
 }
+
 footer {
-  text-align: center;
-}
-footer {
-    border-top: 1px solid white; /* Grosor, estilo (sólido) y color (gris oscuro) */
+    /* Quitamos el border-top físico para que no dependa del ancho del bloque */
     color: #ffffff;
-    margin-inline: 4%;
-    margin-top: 50px;           /* Espacio entre la línea y las imágenes de arriba */
-    padding: 10px 20px 20px 20px;
+    margin-top: 50px;
+    /* Eliminamos el margin-inline del 4% que te lo descentraba */
+    margin-inline: 0; 
+    padding: 30px 20px 20px 20px; /* Un poco más de padding arriba para la línea */
     text-align: center;
+    width: 100%;
+    position: relative; /* Necesario para ubicar la nueva línea */
+}
+
+/* ESTA ES TU NUEVA LÍNEA BLANCA CENTRADA Y CORTA */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 4%;  /* Esto hace que empiece un poco después del borde izquierdo */
+    right: 4%; /* Esto hace que termine un poco antes del borde derecho */
+    height: 1px;
+    background-color: white;
 }
 
 footer h4 {
     margin-top: 20px;
 }
 
-footer li {
-  list-style: none;
+footer ul {
+    list-style: none;
+    padding: 0 !important; 
+    margin: 0 auto; /* Asegura que la lista se quede en el centro */
+    width: 100%;
 }
 
+footer li {
+    list-style: none;
+    width: 100%;
+}
 
 h1 {
   font-family: Helvetica;
@@ -183,11 +202,7 @@ nav ul li:hover {
             width: 100% !important;
             padding: 10px 15px;
         }
-
-    footer {
-      text-align: center;
-    }
-    
+        
     .imagenes-titulo {
         width: 70px; /* Tamaño reducido para iPhone */
         height: auto;
@@ -229,8 +244,5 @@ nav ul li:hover {
   }
   h1 {
       font-size: 1.6rem !important; /* Un poco más pequeño para los más chiquitos */
-  }
-  footer {
-  text-align: center;
   }
 }
