@@ -120,6 +120,18 @@ nav ul li:hover {
 
 /* Media query para el responsivo */
 /* --- 1. TABLETS Y CELULARES GRANDES (Menos de 900px) --- */
+@media (max-width: 1030px) {
+    .secciones {
+        flex-wrap: wrap;       /* Permite que las palabras bajen a una segunda fila si no caben */
+        gap: 15px;             /* Reducimos el espacio entre opciones (estaba en 30px) */
+        justify-content: center;
+        padding: 10px;
+    }
+
+    nav ul li {
+        font-size: 1.1rem;     /* Achicamos un poco la letra (estaba en 1.3rem) */
+    }
+}
 @media (max-width: 900px) {
   .imag-equipos {
     display: flex;
