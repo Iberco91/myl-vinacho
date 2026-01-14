@@ -1,0 +1,31 @@
+/* Contenedor principal para dar espacio arriba y abajo */
+.introduccion-seccion {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center; /* Centra la cajita horizontalmente */
+}
+
+/* La "cajita" de texto */
+.contenedor-texto {
+    max-width: 1050px; /* Evita que el texto se estire de lado a lado */
+    background-color: rgba(0, 0, 0, 0.6); /* Un fondo oscuro semitransparente */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #d4af37; /* Un borde dorado sutil */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+.contenedor-texto h2 {
+    color: #d4af37; /* Dorado */
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contenedor-texto p {
+    color: #e0e0e0; /* Blanco grisáceo para que no canse la vista */
+    line-height: 1.8; /* Espacio entre líneas, clave de profesionalismo */
+    font-size: 1.1rem;
+}
