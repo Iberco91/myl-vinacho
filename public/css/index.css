@@ -25,12 +25,18 @@
   object-position: center; /* Centra el recorte para no cortar cabezas */
 }
 
+
 /* ENLACES DE UTILIDAD DEL HOME  */
 .enlaces-utilidad {
     padding: 30px;
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background-color: rgb(42, 78, 55);
+    width: 100%;
 }
 
 .enlaces-utilidad h2 {
