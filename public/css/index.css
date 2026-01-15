@@ -39,3 +39,47 @@
     width: 45%; 
     min-width: 150px;
   }
+
+  .enlaces-utilidad {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.enlaces-utilidad h2 {
+    color: #d4af37;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* El contenedor que organiza los botones */
+.grid-enlaces {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se ajusta solo según el espacio */
+    gap: 15px; /* Espacio entre botones */
+}
+
+/* Estilo de cada "botón/tarjeta" */
+.tarjeta-enlace {
+    background: rgba(20, 20, 20, 0.8); /* Fondo oscuro */
+    border: 1px solid #d4af37; /* Borde dorado */
+    padding: 15px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efecto al pasar el mouse */
+.tarjeta-enlace:hover {
+    background: #d4af37; /* Se vuelve dorado */
+    color: black; /* Texto negro para contraste */
+    transform: translateY(-5px); /* Se levanta un poquito */
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
