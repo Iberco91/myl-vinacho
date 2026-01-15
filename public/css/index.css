@@ -25,28 +25,6 @@
   object-position: center; /* Centra el recorte para no cortar cabezas */
 }
 
-
-
-@media (max-width: 900px) {
-  .imag-equipos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-  }
-  .divs-imagenes {
-    width: 45%; 
-    min-width: 150px;
-  }
-
-  .enlaces-utilidad {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
 .enlaces-utilidad h2 {
     color: #d4af37;
     margin-bottom: 20px;
@@ -82,4 +60,25 @@
     color: black; /* Texto negro para contraste */
     transform: translateY(-5px); /* Se levanta un poquito */
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+
+@media (max-width: 900px) {
+  .imag-equipos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+  .divs-imagenes {
+    width: 45%; 
+    min-width: 150px;
+  }
+
+  .enlaces-utilidad {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
 }
