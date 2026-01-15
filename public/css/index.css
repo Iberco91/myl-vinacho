@@ -25,11 +25,20 @@
   object-position: center; /* Centra el recorte para no cortar cabezas */
 }
 
+/* ENLACES DE UTILIDAD DEL HOME  */
+.enlaces-utilidad {
+    padding: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .enlaces-utilidad h2 {
-    color: #d4af37;
+    color: #ffffff;
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
 /* El contenedor que organiza los botones */
@@ -43,7 +52,7 @@
 .tarjeta-enlace {
     background: rgba(20, 20, 20, 0.8); /* Fondo oscuro */
     border: 1px solid #d4af37; /* Borde dorado */
-    padding: 15px 10px;
+    padding: 10px 8px;
     text-decoration: none;
     color: white;
     font-weight: bold;
