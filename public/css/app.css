@@ -84,6 +84,23 @@ nav ul li:hover {
     transition: 0.3s; /* Esto hace que el cambio no sea brusco, sino suave */
 }
 
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ffcc00d3;
+}
+
+/* Esta es la que hace que se quede marcado */
+.nav-link.active {
+  color: #ffcc00d3 !important;
+  font-weight: bold;
+  border-bottom: none;
+  text-decoration: none; /* Esto quita la línea de abajo */
+}
+
 
 /* 4. FOOTER */
 
