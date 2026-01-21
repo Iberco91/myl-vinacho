@@ -27,5 +27,53 @@
 .contenedor-texto p {
     color: #e0e0e0; /* Blanco grisáceo para que no canse la vista */
     line-height: 1.8; /* Espacio entre líneas, clave de profesionalismo */
+    font-size: 1.3rem;
+}
+
+/* Parte dinamica (acordeon) */
+/* Estilos para el Acordeón */
+.contenedor-acordeon {
+    max-width: 1050px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.item-acordeon {
+    margin-bottom: 10px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.boton-pregunta {
+    width: 100%;
+    padding: 20px;
+    background: none;
+    border: none;
+    color: #d4af37;
     font-size: 1.1rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.boton-pregunta:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.caja-respuesta {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    line-height: 1.6;
+}
+
+.icono {
+    font-size: 1.5rem;
+    font-weight: bold;
 }

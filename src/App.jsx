@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Aclaraciones from './components/Aclaraciones';
 // Aquí importaremos tus páginas más adelante
 
 function App() {
@@ -204,7 +205,7 @@ function App() {
           <Route path="/licho" element={<></>} />
           <Route path="/carlicho" element={<></>} />
           <Route path="/informacion-cartas" element={<></>} />
-          <Route path="/aclaraciones" element={<></>} />
+          <Route path="/aclaraciones" element={<Aclaraciones />} />
           <Route path="/otros" element={<></>} />
 
         </Routes>
@@ -226,7 +227,7 @@ function App() {
           <p>&copy; 2026 Vinacho - Todos los derechos reservados.</p>
         </div>
       </footer>
-      
+
     </Router>
   );
 }
