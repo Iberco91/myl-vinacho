@@ -32,9 +32,9 @@
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 900;
+    position: relative;
+    /* top: 0; */
+    /* z-index: 900; */
     background-color: rgb(42, 78, 55);
     width: 100%;
 }

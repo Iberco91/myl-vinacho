@@ -20,6 +20,7 @@ function App() {
         <aside>
           <Navbar />
         </aside>
+      </div>
 
         <section className="enlaces-utilidad">
           <h2>Enlaces de utilidad</h2>
@@ -40,7 +41,7 @@ function App() {
         </section>
 
 
-      </div>
+      
 
      <main>
         <Routes>

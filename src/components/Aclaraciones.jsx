@@ -10,17 +10,17 @@ export default function Aclaraciones () {
         {
         id: 1,
         pregunta: "¿Sir Galehaut puede escoger un Aliado en linea de ataque para defenderlo?",
-        respuesta: "No, solamente puede ser escogido un Aliado en línea de defensa"
+        respuesta: "No, solamente puede ser escogido un Aliado en línea de defensa."
         },
         {
         id: 2,
         pregunta: "¿En que momento se puede usar el efecto 'prevenir'?",
-        respuesta: "Prevención se puede usar en cualquier momento del juego"
+        respuesta: "Prevención se puede usar en cualquier momento del juego."
         },
         {    
         id: 3,
         pregunta: "¿Desterrando al Aliado 'Baltazar', se puede cancelar la habilidad de Hera?",
-        respuesta: "Si"
+        respuesta: "Si."
         },
         {
         id: 4,
@@ -33,6 +33,15 @@ export default function Aclaraciones () {
         respuesta: 
         <>
         De acuerdo a la <strong>Información entregada por el DAR</strong>, los aliados se mantienen en la línea de ataque.
+        </>
+        },
+        {
+        id: 6,
+        pregunta: "¿La habilidad de Fergus Mor Maceric, El Gran Wyrm y Titania como funcionan?",
+        respuesta: 
+        <>
+        De acuerdo a la <strong>Información entregada por el DAR</strong>, la habilidad de estas 3 cartas es una habilidad continua, 
+        por lo tanto estos no requieren estar en juego previo a jugar más Aliados para beneficiarlos.
         </>
         }
     ];
