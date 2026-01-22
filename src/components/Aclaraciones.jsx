@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-//SEGUIR EL HISTORIAL DE CHAMPIONS DESDE 24/04/2025 HACIA ATRAS
+//SEGUIR CON EL FAQ, ULTIMA AGREGADA: 7/143
 export default function Aclaraciones () {
     // 1. Estado para manejar qué pregunta está abierta
     const [abierta, setAbierta] = useState(null);
@@ -22,7 +22,7 @@ export default function Aclaraciones () {
         {    
         id: 3,
         pregunta: "¿Desterrando al Aliado 'Baltazar', se puede cancelar la habilidad de Hera?",
-        respuesta: "Si."
+        respuesta: "No, debido a la regla de la autorreferencia."
         },
         {
         id: 4,
@@ -34,7 +34,7 @@ export default function Aclaraciones () {
         pregunta: "¿Si realizo un ataque y el rival 'cancela' el ataque, los Aliados vuelven a la línea de defensa?",
         respuesta: 
         <>
-        De acuerdo a la <strong>Información entregada por el DAR</strong>, los aliados se mantienen en la línea de ataque.
+        De acuerdo a la <strong>Información entregada por el DAR</strong>, los aliados vuelven a la linea de defensa si el ataque fue cancelado.
         </>
         },
         {
@@ -55,6 +55,29 @@ export default function Aclaraciones () {
         id: 8,
         pregunta: "Respecto a la carta Campesino, ¿Si le coloco una daga de bote, puedo usar su habilidad (de Campesino)?",
         respuesta: "No, ya que la Daga de Bote no permite que se utilicen habilidades que impliquen destruir a un Aliado, ya que su función es justamente lo opuesto."
+        },
+        {
+        id: 9,
+        pregunta: "¿Se paga el coste del Aliado buscado con Cruz Templaria? (FAQ)",
+        respuesta: [
+            "Si, ya que dicha carta tiene una Errata y fue impresa nuevamente con el texto: ",
+            "En tu Fase de Vigilia, puedes Desterrar a Cruz Templaria para buscar un Aliado en tu Mazo Castillo y jugarlo pagando su coste. ",
+            "En la Fase Final, ese Aliado debe ser Desterrado. Carta Única."
+            ]
+        },
+        {
+        id: 10,
+        pregunta: "¿En qué momento puedo generar Oros con Ogham, Herrero y Dragones? (FAQ)",
+        respuesta: [
+            "En estos tres casos, la habilidad de Dragones, Ogham y Herrero es activada, por lo tanto se debe Mover el oro a la Zona de oro pagado, para generar los Oros.",
+            " Por lo tanto, si por ejemplo tienes un Ojo Udyat en juego, tu oponente juega una carta, y buscas una Necrópolis Popular, deberás pagar 2 Oros, ",
+            "y Ogham solo contará como 1 oro. "
+            ]
+        },
+        {
+        id: 11,
+        pregunta: "Respecto a la carta Saladino, ¿Si yo genero los dos Oros en Fase de Vigilia, los puedo usar en Guerra de talismanes?",
+        respuesta: "Todo lo que no especifique hasta cuando es la generación de Oros, es hasta la Fase Final."
         },
     ];
 
