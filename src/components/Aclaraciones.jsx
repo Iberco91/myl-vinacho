@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-//SEGUIR EL HISTORIAL DE CHAMPIONS DESDE 10/01/2026 HACIA ATRAS
+//SEGUIR EL HISTORIAL DE CHAMPIONS DESDE 24/04/2025 HACIA ATRAS
 export default function Aclaraciones () {
     // 1. Estado para manejar qué pregunta está abierta
     const [abierta, setAbierta] = useState(null);
@@ -41,9 +41,19 @@ export default function Aclaraciones () {
         respuesta: 
         <>
         De acuerdo a la <strong>Información entregada por el DAR</strong>, la habilidad de estas 3 cartas es una habilidad continua, 
-        por lo tanto estos no requieren estar en juego previo a jugar más Aliados para beneficiarlos.
+        por lo tanto estos no requieren estar en juego de manera previa a jugar más Aliados para beneficiarlos.
         </>
         }
+        {
+        id: 7,
+        pregunta: "Respecto a la carta Hestia, ¿La habilidad se activa cuando en un ataque yo dejo pasar el daño, o se activa ante cualquier daño que pase bloqueando o no bloqueando?",
+        respuesta: "La habilidad de Hestia se activa al momento de pasarle daño de combate al Mazo del propietario de Hestia."
+        },
+        {
+        id: 8,
+        pregunta: "Respecto a la carta Campesino, ¿Si le coloco una daga de bote, puedo usar su habilidad (de Campesino)?",
+        respuesta: "No, ya que la Daga de Bote no permite que se utilicen habilidades que impliquen destruir a un Aliado, ya que su función es justamente lo opuesto."
+        },
     ];
 
     const toggleDuda = (id) => {
