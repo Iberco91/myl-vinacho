@@ -43,7 +43,7 @@ export default function Aclaraciones () {
         De acuerdo a la <strong>Información entregada por el DAR</strong>, la habilidad de estas 3 cartas es una habilidad continua, 
         por lo tanto estos no requieren estar en juego de manera previa a jugar más Aliados para beneficiarlos.
         </>
-        }
+        },
         {
         id: 7,
         pregunta: "Respecto a la carta Hestia, ¿La habilidad se activa cuando en un ataque yo dejo pasar el daño, o se activa ante cualquier daño que pase bloqueando o no bloqueando?",
