@@ -77,3 +77,81 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+/* Buscador */
+
+.contenedor-buscador {
+    max-width: 1050px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.input-busqueda {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #d4af37;
+    border-radius: 30px; /* Estilo redondeado moderno */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-busqueda:focus {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.resultados-texto {
+    color: #d4af37;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.sin-resultados {
+    color: #e0e0e0;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Contenedor para posicionar la X */
+.input-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Ajuste al input para que el texto no se tape con la X */
+.input-busqueda {
+    width: 100%;
+    padding: 15px 45px 15px 20px; /* 45px a la derecha para dejar espacio a la X */
+    font-size: 1.1rem;
+    border: 2px solid #d4af37;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    outline: none;
+}
+
+/* Estilo del botón de cerrar */
+.boton-limpiar {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.boton-limpiar:hover {
+    color: white;
+    transform: scale(1.2);
+}

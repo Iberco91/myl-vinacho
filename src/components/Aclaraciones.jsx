@@ -5,7 +5,9 @@ import { useState } from 'react';
 export default function Aclaraciones () {
     // 1. Estado para manejar qué pregunta está abierta
     const [abierta, setAbierta] = useState(null);
-    // 2. Tus datos (Aquí puedes ir agregando más preguntas y respuestas)
+    // 2: Estado para el texto del buscador
+    const [busqueda, setBusqueda] = useState("");
+    // 3. Tus datos (Aquí puedes ir agregando más preguntas y respuestas)
     const listaDudas = [
         {
         id: 1,
@@ -56,9 +58,11 @@ export default function Aclaraciones () {
         },
     ];
 
-    const toggleDuda = (id) => {
-        setAbierta(abierta === id ? null : id);
-    };
+    // LÓGICA DE FILTRADO: 
+    // Creamos una lista nueva que solo contiene lo que coincide con la búsqueda
+    const dudasFiltradas = listaDudas.filter((item) =>
+    item.pregunta.toLowerCase().includes(busqueda.toLowerCase())
+    );
 
 
     return (
@@ -78,27 +82,61 @@ export default function Aclaraciones () {
                 </div>
             </section>
 
+            {/* NUEVA SECCIÓN: Buscador */}
+            <section className="seccion-buscador">
+                <div className="contenedor-buscador">
+                    <div className="input-wrapper">
+                        <input 
+                            type="text" 
+                            placeholder="Buscar duda por palabra clave..." 
+                            value={busqueda}
+                            onChange={(e) => setBusqueda(e.target.value)} // Actualiza el estado al escribir
+                            className="input-busqueda"
+                        />
+                        {/* Solo mostramos la X si hay algo escrito en 'busqueda' */}
+                        {busqueda && (
+                            <button 
+                                className="boton-limpiar" 
+                                onClick={() => setBusqueda("")}
+                                title="Limpiar búsqueda"
+                            >
+                                &times; {/* Esto es el símbolo de multiplicación que parece una X */}
+                            </button>
+                        )}
+                    </div>
+
+                {/* Opcional: Mostrar cuántos resultados hay */}
+                    {busqueda && (
+                        <p className="resultados-texto">
+                        Resultados encontrados: {dudasFiltradas.length}
+                        </p>
+                )}
+                </div>
+            </section>
+
             {/* SECCIÓN INTERACTIVA (El acordeón) */}
             <section className="acordeon-seccion">
                 <div className="contenedor-acordeon">
-                    {listaDudas.map((item) => (
-                        <div key={item.id} className="item-acordeon">
-                            <button 
-                                className={`boton-pregunta ${abierta === item.id ? 'activo' : ''}`}
-                                onClick={() => toggleDuda(item.id)}
-                            >
+                    {dudasFiltradas.length > 0 ? (
+                        dudasFiltradas.map((item) => (
+                            <div key={item.id} className="item-acordeon">
+                                <button 
+                                className="boton-pregunta" 
+                                onClick={() => setAbierta(abierta === item.id ? null : item.id)}
+                                >
                                 {item.pregunta}
-                                <span className="icono">{abierta === item.id ? '−' : '+'}</span>
-                            </button>
-                            
-                            {/* Si la pregunta está abierta, se muestra la respuesta */}
-                            {abierta === item.id && (
-                                <div className="caja-respuesta">
+                                <span>{abierta === item.id ? '−' : '+'}</span>
+                                </button>
+                                {abierta === item.id && (
+                            <div className="caja-respuesta">
                                 <p>{item.respuesta}</p>
-                                </div>
+                            </div>
                             )}
-                        </div>
-                    ))}
+                            </div>
+                        ))
+                        ) : (
+                        <p className="sin-resultados">No se encontraron dudas con "{busqueda}"</p>
+                    )}
                 </div>
             </section>
         </main>
