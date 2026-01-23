@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-//SEGUIR CON EL FAQ, ULTIMA AGREGADA: 30/143
+//SEGUIR CON EL FAQ, ULTIMA AGREGADA: 60/143
 export default function Aclaraciones () {
     // 1. Estado para manejar qué pregunta está abierta
     const [abierta, setAbierta] = useState(null);
@@ -235,8 +235,7 @@ export default function Aclaraciones () {
         pregunta: "¿Cuánta fuerza tiene Balduino con Duque Godofredo en juego? (FAQ)",
         respuesta: [
                 "Balduino pierde 1 a la Fuerza cada vez que ataque, esta reducción de Fuerza se aplica permanentemente a su Fuerza impresa en la carta, por lo cual este ",
-                "puede recibir bonificadores de cartas como por Ejemplo: Duque Godofredo o Hacha de Batalla, los cuales no serán restados por su Habilidad.",
-
+                "puede recibir bonificadores de cartas como por Ejemplo: Duque Godofredo o Hacha de Batalla, los cuales no serán restados por su Habilidad."
             ]
         },
         {
@@ -245,9 +244,246 @@ export default function Aclaraciones () {
         respuesta: [
                 "La habilidad de Nimue hace que se convierta en una copia exacta de la carta hasta la Fase Final. Por lo tanto cualquier habilidad y/o efecto resuelto ",
                 "sobre la carta, afectará como si fuese un Greenknight, por lo tanto si pierde su habilidad tendrá fuerza cero.",
-
             ]
         },
+        {
+        id: 34,
+        pregunta: "¿Si tengo a Orium y Monte Kilgharrah en juego, cuando se destruya Orium en la Fase Final ya que atacó, puedo barajarlo en el mazo por el efecto del Totem? (FAQ)",
+        respuesta: [
+                "Si, ya que el orden correcto para resolver la interacción es: Se destruye el Aliado, luego se dispara el efecto de Monte Kilgharrah por lo tanto podrás ",
+                "barajar una carta de tu Cementerio en tu Mazo Castillo.",
+            ]
+        },
+        {
+        id: 35,
+        pregunta: "Crear Fungoides + Hijas del Caldero, ¿Puedo desterrar las Hijas del Caldero para ganar un turno extra? (FAQ)",
+        respuesta: [
+                "Con Crear Fungoides podrás traer a Hijas del Caldero, pero serán destruidas al inicio de la Fase final, por lo tanto no podrás ganar un turno extra. ",
+                "La habilidad de Hijas del Caldero se dispara previo a Finalizar el turno.",
+            ]
+        },
+        {
+        id: 36,
+        pregunta: "¿Crear fungoides haciendo objetivo a Aliados indestructibles? (FAQ)",
+        respuesta: [
+                "Esta sería una jugada completamente válida, ya que cuando se realizan búsquedas en el Mazo Castillo (Zona Privada), no se realizan comprobaciones de ",
+                "requisitos o condiciones de juego para resolver el Talismán en cuestión 'Crear Fungoides'. Caso similar sería con Cruz Templaria, se podría buscar un ",
+                "Aliado Indesterrable con su habilidad. Aplica también el mismo concepto para Crear Caballero Negro, trayendo un Aliado Indesterrable del Cementerio oponente.",
+            ]
+        },
+        {
+        id: 37,
+        pregunta: "En respuesta a un ataque con Goblin Maligno, juegan Congelar, ¿Cómo se resuelve? (FAQ)",
+        respuesta: [
+                "En esta situación siempre hay que tener en consideración las prioridades en que se disparan o resuelven las habilidades o efectos. ",
+                "Goblin Maligno dispara su efecto en respuesta a declarar ataque. Por lo tanto una vez resuelto el efecto de ganar fuerza, el oponente podría jugar ",
+                "Congelar, pero no tendrá ningún efecto ya que Goblin Maligno ya fue bonificado por su habilidad disparada. Esto ocurre al ser el jugador activo que ",
+                "tiene la prioridad en este caso, se bonifica antes de poder el oponente responder con el Talismán."
+            ]
+        },
+        {
+        id: 38,
+        pregunta: "¿Puedo jugar Capa de Invisibilidad a Helios y/o Dendera? (FAQ)",
+        respuesta: [
+                "En ambos casos no se podría jugar Capa de Invisibilidad ya que dichas cartas poseen la habilidad en su texto 'No pueden ser afectados por Talismanes ",
+                "oponentes', esto se responde por que al jugar Capa de Invisibilidad tanto Helios como Dendera ya estarían en juego por ende, su habilidad los protegerá ",
+                "ante talismanes oponentes.",
+            ]
+        },
+        {
+        id: 39,
+        pregunta: "¿Si tengo en mi cementerio a Goblin Maligno y luego lo copio con Nimue, ¿Este puede atacar ese mismo turno que entra en juego? (FAQ)",
+        respuesta: [
+                "No, ya que los Aliados tienen como requisito haber estado en juego bajo el control del jugador activo desde el principio de su última fase de agrupación. ",
+                "Nimue, entra al juego en fase de Vigilia y al momento de copiar a Goblin Maligno, no está entrando en juego, por lo que no está habilitada para atacar de ",
+                "inmediato.",
+            ]
+        },
+        {
+        id: 40,
+        pregunta: "¿Puedo no robar por Sir Agravain cuando se cumplan sus condiciones cuando entra en juego? (FAQ)",
+        respuesta: "En este caso en particular, tanto el robo como el descarte son obligatorios, siempre que se cumpla la condición de controlar otro Aliado de raza Caballero.",
+        },
+        {
+        id: 41,
+        pregunta: "¿Qué pasa si hago objetivo a un Aliado en Línea de defensa con Sebile? (FAQ)",
+        respuesta: "El Aliado podrá ser declarado atacante (si pudiese), pero luego no podrá ser agrupado mientras Sebile esté en línea de defensa.",
+        },
+        {
+        id: 42,
+        pregunta: "¿Puedo con Carnwennan quitar la habilidad a una carta fuera del juego? (FAQ)",
+        respuesta: [
+                "Si por ejemplo mi oponente tiene un Asaltar la Caravana o una carta que se pueda jugar del Cementerio, en esa zona NO puedo desterrar Carnwennan para ",
+                 "quitarle la habilidad. Carnwennan solo afecta a cartas que no sean Oro que estén en juego.",
+            ]
+        },
+        {
+        id: 43,
+        pregunta: "Si el portador de Espada de Caballero hace daño, en su próximo turno su oponente, ¿Qué tipo de baraje no podrá resolver? (FAQ)",
+        respuesta: [
+                "El efecto de esta carta, solo protegerá de barajar cartas del Cementerio al Mazo Castillo. Errata: 'Si el portador hace daño al Mazo Castillo oponente, ",
+                "tu oponente no podrá barajar cartas de su Cementerio en su Mazo Castillo en su próximo turno.' ",
+            ]
+        },
+        {
+        id: 44,
+        pregunta: "Si luego de resolver el efecto de Sir Robin de Locksley, este sale del juego y el Aliado controlado sigue en juego en la fase final, ¿Debo devolverlo al control oponente? (FAQ)",
+        respuesta: "Si, ya que el efecto está disparado hasta la Fase final, por lo tanto si sigue en juego deberá resolverse y volver al control oponente."  
+        },
+        {
+        id: 45,
+        pregunta: "Al jugar un Aliado con Siroco, ¿Dónde se juega, y hasta cuando? (FAQ)",
+        respuesta: [
+                "Quien juegue el Talismán Siroco, se considerará el controlador del Aliado, hasta que salga del juego. Tener en consideración que si el Aliado jugado con ",
+                "Siroco sale del juego por cualquier efecto, este se va a la Zona correspondiente, pero del dueño de el Aliado jugado.",
+            ]
+        },
+        {
+        id: 46,
+        pregunta: "¿Puedo descartar un oro como Corona de Arturo para dar el bono de fuerza por Excalibur? (FAQ)",
+        respuesta: [
+                "No, ya que se debe descartar una carta que tenga Coste. La habilidad podría ser ejecutada descartando cartas de Talismán, Arma, Aliado y/o Totem. ",
+                "Recordatorio: Los Oros no poseen coste.",
+            ]
+        },
+        {
+        id: 47,
+        pregunta: "¿Hobgoblin cambió su nombre, es válido para el bono de Fuerza de Goblin Maligno? (FAQ)",
+        respuesta: [
+                "Si, ya que oficialmente la carta contiene en su nombre 'Goblin'. En su versión anterior estaba mal escrito y desde el producto Reposición Relatos ",
+                "Espada Sagrada, se considera carta nueva además de recibir una mejora en su habilidad.",
+            ]
+        },
+        {
+        id: 48,
+        pregunta: "¿Si juego Espada Larga portandola a un Aliado oponente, este puede responder con un Siete contra Tebas? (FAQ)",
+        respuesta: [
+                "El oponente no podrá responder con Siete contra Tebas para cancelar la habilidad disparada de Espada Larga, ya que al ser jugada ya no se considerará ",
+                "carta oponente. Por lo tanto el efecto de Siete contra Tebas no es válido, ya que solo cancela habilidades Activadas o Disparadas oponentes.",
+            ]
+        },
+        {
+        id: 49,
+        pregunta: "¿Cómo se resuelve Escudo de Atenea? (FAQ)",
+        respuesta: [
+                "La habilidad de Escudo de Atenea es una Redirección, por ende cuando utilices su habilidad, su portador no se vería afectado. Siempre hay que tener en ",
+                "cuenta que el nuevo objetivo debe ser válido para poder llevar a cabo la Redirección. Por regla general los efectos globales no pueden ser Redirigidos, ",
+                "Ejemplos: Eolo y Rayos.",
+            ]
+        },
+        {
+        id: 50,
+        pregunta: "¿Debo mostrar la carta por Idmon el Adivino? (FAQ)",
+        respuesta: [
+                "La habilidad impresa de Idmon el adivino en las versiones actuales no especifica que la carta debe ser mostrada. Para efectos futuros y nuevas impresiones ",
+                "Idmon el Adivino deberá MOSTRAR la carta del tope, por lo tanto se entiende que Idmon el Adivino recibe esta ERRATA. ",
+            ]
+        },
+        {
+        id: 51,
+        pregunta: "¿Puedo jugar Antropófagos en Aliados Indestructibles? (FAQ)",
+        respuesta: [
+                "Por regla general en Primer Bloque, existen los requisitos para que las cartas puedan ser jugadas, en este caso el requisito fundamental de Antropófagos es ",
+                "poder hacer objetivo a un Aliado y además que dicho aliado pueda ser Destruido en la Fase Final, es por esto que NO sería una jugada válida.",
+            ]
+        },
+        {
+        id: 52,
+        pregunta: "¿Leonidas puede robar en todos los turnos? (FAQ)",
+        respuesta: [
+                "No, ya que solo robas una carta extra en tu Fase Final. En este caso en particular, siempre que se cumpla la condición (Controlar 2 o más Héroes), deberás ",
+                "Robar 1 carta en tu Fase Final. El efecto de Robar se dispara sólo en Tu Fase Final.",
+            ]
+        },
+        {
+        id: 53,
+        pregunta: "¿Cómo se resuelve Arde Troya? (FAQ)",
+        respuesta: [
+                "La Habilidad de Arde Troya posee una Errata para mejor entendimiento y es la siguiente: 'Anula o cancela una carta que afecte a los Oros en juego. Si la ",
+                "carta es cancelada, destrúyela. Si juegas Arde Troya en el turno oponente, éste pasa directamente a la Fase Final'. Ejemplo: Si el oponente en su Turno ",
+                "juega Felipe II, inmediatamente después de eso podrás jugar Arde troya para cancelar su habilidad de entrada y luego destruirla. En este caso se dispara la ",
+                "habilidad de salida de Felipe II (Destruir un Oro), luego el oponente deberá pasar a su Fase Final directamente.",
+            ]
+        },
+        {
+        id: 54,
+        pregunta: "Caja de Pandora, ¿Debe estar en reserva para disparar su habilidad? (FAQ)",
+        respuesta: [
+                "En este caso particular, para su mejor entendimiento la redacción de Caja de Pandora es: 'Si Caja de Pandora está en tu Reserva de Oros, puedes desterrarla ",
+                "y pagar 1 Oro para anular un Talismán oponente de coste 2 o menos'. Por lo tanto se entiende que Caja de Pandora debe estar en Reserva y desterrarla para ",
+                "anular el Talismán oponente.",
+            ]
+        },
+        {
+        id: 55,
+        pregunta: "Si me atacan con 3 Aliados, ¿Cuánto daño hace Hestia al mazo Castillo oponente? (FAQ)",
+        respuesta: [
+                "Hay que tener en cuenta que en la Asignación de Daño se calculará la suma de todos los Aliados que logren hacer daño al Mazo castillo oponente y se tomará ",
+                "ese resultado como Daño de manera consolidada. Es por esto que Hestia, solo podría realizar 3 de Daño.",
+            ]
+        },
+        {
+        id: 56,
+        pregunta: "¿Puedo pagar Ave de Hera a ella misma para transformarla y atacar? (FAQ)",
+        respuesta: [
+                "Sí, ya que la habilidad se lo permite, esta no pide condición de Zona (Reserva-Oro Pagado) y no la hace excluyente. No obstante, siempre tener en ",
+                "consideración la Zona desde donde fue convertido Ave de Hera, ya que en la Fase Final debería volver a esa misma Zona. Tener en cuenta que cuando Ave de Hera ",
+                "se Convierte en Aliado pierde el tipo de carta Oro, pudiendo ser destruida en este caso con cartas como Bola de Fuego.",
+            ]
+        },
+        {
+        id: 57,
+        pregunta: "La habilidad de Arco de Apolo, ¿Es una vez por turno o solo en tu turno? (FAQ)",
+        respuesta: [
+                "Esta carta en particular tiene un error de impresión, y su habilidad es “Una vez por turno”, por lo tanto podrá ser activada en tu turno como también en ",
+                "Guerra de Talismanes del turno oponente.",
+            ]
+        },
+        {
+        id: 58,
+        pregunta: "La carta Veneno Sagrado, ¿Afecta a Helios? (FAQ)",
+        respuesta: [
+                "Hay cartas como Veneno sagrado, que afectan directamente al jugador objetivo y no a los Aliados en sí. El efecto de Veneno Sagrado haría que destruyas un ",
+                "Aliado que controles, y tu oponente 2 Aliados, y como es el mismo jugador el que destruye a sus aliados, Helios podría ser destruido.",
+            ]
+        },
+        {
+        id: 59,
+        pregunta: "¿Puedo jugar Forma de Toro si hay una Corona de Arturo en juego, y ese jugador controla 2 o más Aliados? (FAQ)",
+        respuesta: [
+                "Por regla general en Primer Bloque, existen los requisitos para que las cartas puedan ser jugadas, en este caso uno de los requisitos de Forma de Toro es ",
+                "poder en la Fase Final, destruir un oro que controles, es por esto que no sería una jugada válida.",
+            ]
+        },
+        {
+        id: 60,
+        pregunta: "¿Si se jugó Red de Aracne, ¿Puedo activar la habilidad de Nimue? o ¿Cuánto daño hace Bas-Pef? (FAQ)",
+        respuesta: [
+                "En el caso de Nimue no podría activar su habilidad ya que por efecto de Red de Aracne, no puedes elegir un Aliado y copiar su habilidad. Por el contrario en ",
+                "el caso de Bas-Pef si podría hacer daño directo, ya que “contar” Aliados o cartas específicas de un Cementerio, no significa que esté jugando con dicha Zona. ",
+                "Solo se está haciendo un chequeo.",
+            ]
+        },
+        {
+        id: 61,
+        pregunta: "¿Puedo jugar un Antropófagos a un Ra o Rey Arturo Pendragón y en Fase Final prevenir que salga del juego? (FAQ)",
+        respuesta: [
+                "Si, ya que ninguno de los Aliados son indestructibles que sería la condición para no poder hacerlos objetivo. En ambos casos tienen la capacidad de Prevenir ",
+                "que sean destruidos, es por esto que cuando ese evento ocurra (Destruirlos en la Fase Final), ambos Aliados quedarían en control del jugador que jugo la ",
+                "carta Antropofagos.",
+            ]
+        },
+        {
+        id: 62,
+        pregunta: "Si me atacan con un aliado con Gladius y bloqueo con uno de menor fuerza, ¿Puedo usar al Aliado que bloqueó para que sea destruido por la Gladius? (FAQ)",
+        respuesta: [
+                "No, de acuerdo con el DAR 'Julio 2021' en su apartado 5.3.4 'Asignación de Daño', 'acciones de esta etapa', en los puntos principales se especifica que ",
+                "en primera instancia el jugador defensor recibe el daño resultante del cálculo de fuerzas entre el(los) aliado(s) oponente(s) declarado(s) atacante(s) y ",
+                "su(s) aliado(s) bloqueador(es), para luego pasar a la etapa de la destrucción (en caso de que los aliados puedan ser destruidos) por diferencia de fuerzas.",
+            ]
+        },
+
+
 
 
 
@@ -270,7 +506,7 @@ export default function Aclaraciones () {
                         En esta sección se aclaran dudas e inquietudes sobre ciertas situaciones que se pueden dar 
                         en las mititos. Se presenta primero la pregunta o duda que surge en una situación del juego
                         entre dos o mas cartas, y al hacerle click se abre un desplegable con la respuesta en concreto.
-                        Dentro esta toda la información del DAR también y todas las dudas que han salido en el grupo de la 
+                        Dentro esta toda la información del DAR, FAQ y también y todas las dudas que han salido en el grupo de la 
                         Champions. Si existen mas dudas háganmelas llegar para agregar toda la información necesaria acá.
                     </p>
                     <p>¡Espero les sirva de ayuda!</p>
