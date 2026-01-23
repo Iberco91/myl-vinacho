@@ -59,6 +59,7 @@
     justify-content: space-between;
     align-items: center;
     transition: background 0.3s;
+    gap: 30px;
 }
 
 .boton-pregunta:hover {
@@ -154,4 +155,12 @@
 .boton-limpiar:hover {
     color: white;
     transform: scale(1.2);
+}
+
+/* Para los saltos de linea */
+.texto-punteo {
+    white-space: pre-line; /* Clave: respeta los saltos de línea (Enter) */
+    line-height: 1.6;      /* Da aire entre líneas */
+    padding: 10px 5px;     /* Espacio interno */
+    color: #e0e0e0;
 }
