@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-//SEGUIR CON EL FAQ, ULTIMA AGREGADA: 60/143
+//SEGUIR CON EL FAQ, ULTIMA AGREGADA: 98/143
 export default function Aclaraciones () {
     // 1. Estado para manejar qué pregunta está abierta
     const [abierta, setAbierta] = useState(null);
@@ -224,9 +224,9 @@ export default function Aclaraciones () {
         },
         {
         id: 31,
-        pregunta: "¿Qué pasa con Juramento Feérico buscando Armas y portando a Aliados que no pueden ser declarados atacantes (Ptah, Osiris, Ay)? (FAQ)",
+        pregunta: "¿Qué pasa con Juramento Feerico buscando Armas y portando a Aliados que no pueden ser declarados atacantes (Ptah, Osiris, Ay)? (FAQ)",
         respuesta: [
-                "En este caso, el Arma que esté siendo jugada con Juramento Feérico a un Aliado que no esté habilitado para atacar, (por ejemplo Ptah, Osiris, Ay), no podrán ",
+                "En este caso, el Arma que esté siendo jugada con Juramento Feerico a un Aliado que no esté habilitado para atacar, (por ejemplo Ptah, Osiris, Ay), no podrán ",
                 "ser declarados Atacantes.",
             ]
         },
@@ -491,6 +491,327 @@ export default function Aclaraciones () {
                 "coste). Si la carta sale del juego y vuelve a entrar, esta vuelve con su habilidad.",
             ]
         },
+        {
+        id: 64,
+        pregunta: "Si tengo dos copias de Ares en juego y en Guerra de Talismanes activo de uno de ellos, luego mi Oponente cancela la habilidad de este, ¿Puedo pagar el coste de activación de mi segundo Ares para cancelar un ataque o bloqueo? (FAQ)",
+        respuesta: [
+                "Si, ya que se activa en Guerra de Talismanes. Recordar que siempre se debe respetar los turnos de dicha fase, por lo que, si la habilidad del primer Ares es ",
+                "cancelada, se le cede el turno de acción al oponente.",
+            ]
+        },
+        {
+        id: 65,
+        pregunta: "¿Como se resuelve El Don de Clío con 1, 2, 3 o 4 cartas en el Mazo Castillo? (FAQ)",
+        respuesta: `Ya que mirarás en medida de lo posible siempre quedará primero una carta en tu mano, luego una al tope y el resto al cementerio.
+
+        • Si tienes 1 carta en el mazo, pierdes la partida ya que primero pondrás una carta en tu mano y no quedarán cartas en el mazo.
+        • Si tienes 2 cartas en el mazo y juegas el don de clio, una irá a tu mano otra al tope y nada al cementerio.
+        • Si tienes 3 o 4 cartas o más pondrás una en tu mano, una al tope y el resto irá al cementerio.`
+        },
+        {
+        id: 66,
+        pregunta: "¿Como se resuelve Polemos? (FAQ)",
+        respuesta: `Polemos permite robar 2 cartas al jugador que muestre la carta de mayor coste, en consecuencia de esto, se resuelve.
+
+        • Jugador A muestra carta coste 2 - Jugador B muestra un oro: Roba el jugador A.
+        • Jugador A muestra carta coste 2 - Jugador B muestra carta coste 2 : Ningún jugador roba, puesto que ninguno tuvo superioridad en coste.
+        • Jugador A muestra carta de oro - Jugador B muestra carta de oro: Ningún jugador roba, puesto que un oro no tiene coste.
+        • Jugador A, muestra carta coste 2 - Jugador B muestra carta coste 1: Roba el jugador A, puesto que mostró una carta de mayor coste.
+        • Jugador A muestra un Oro - Jugador B muestra una carta coste 0: Ningún jugador roba las 2 cartas por Polemos.
+        
+        Si ambos jugadores tienen 1 carta en su mazo castillo: Ambos deben mostrar la primera carta, puesto que la habilidad de Polemos se 
+        activa al ser declarado atacante y el mostrar la carta solo es exhibir no generando un daño al Mazo Castillo.`
+        },
+        {
+        id: 67,
+        pregunta: "Si nombro con Temístocles “Goblin”, que cartas pierden la habilidad? ¿Cómo se aplica esta regla para Nehebaku? (FAQ)",
+        respuesta: [
+                "Al jugar Temístocles y resolver su habilidad, se debe nombrar una carta, la cual no afecta la regla de Concordancia de nombres. Ejemplos: Si nombro 'Goblin', ",
+                "se considerará que será el Aliado Coste 2 Fuerza 2. Pero no Goblin Maligno, Goblinstone, etc. Si nombro 'Druida' no hay carta que solo se llame Druida, por lo ",
+                "tanto no es una jugada válida y debe corregirse. En términos generales, para nombrar una carta debe ser algo que se puede identificar, incluso el jugador no ",
+                "pudiese conocer el nombre exacto de la carta. Por ejemplo, es válido nombrar e identificar una carta por su coste, fuerza, habilidad y alguna característica ",
+                "que a se refiere. En caso de requerir ayuda o no llegar a un acuerdo en el entendimiento de la carta nombrada, se puede apoyar en el criterio del Juez para ",
+                "entender cuál carta fue nombrada. Esta aclaración se extiende para otros tipos de cartas que nombren, como por ejemplo Nehebaku. ",
+            ]
+        },
+        {
+        id: 68,
+        pregunta: "Kenneth I, ¿Puede desterrarse para nombrar Talismanes? (FAQ)",
+        respuesta: [
+                "En su errata oficial, Kenneth I explícitamente indica que el requisito para su activación es que la carta objetivo debe estar en juego, y los Talismanes ",
+                "'NO ENTRAN EN JUEGO'. ",
+            ]
+        },
+        {
+        id: 69,
+        pregunta: "¿Cuál es la forma correcta para jugar a Tutatis? (FAQ)",
+        respuesta: `Para poder jugar Tutatis se deben siempre cumplir la condiciones requeridas para jugarlo, en este caso sería controlar al menos 2 Aliados, sin ser considerado el mismo:
+
+        • Ejemplo 1: Jugarlo desde la Mano
+        • Ejemplo 2: Nombrarlo con Sir Bedivere
+        • Ejemplo 3: Jugarlo por efecto de una Llama Fría
+        • Ejemplo 4: Jugarlo por efecto de un Tumulario
+        `
+        },
+        {
+        id: 70,
+        pregunta: "¿Cuántos Boobrie puedo jugar en respuesta a una declaración de ataque? (FAQ)",
+        respuesta: [
+                "Solo uno, ya que por regla general, la activación de múltiples habilidades en respuesta a un evento, se aplica solo para cartas en juego. Siempre que juegues ",
+                "Boobrie en respuesta a un ataque oponente, éste debe ser declarado bloqueador. ",
+            ]
+        },
+        {
+        id: 71,
+        pregunta: "Letanía, ¿Qué Oros puedo prevenir que sean afectados? (FAQ)",
+        respuesta: [
+                "La habilidad de Letanía es una prevención, esto quiere decir que se puede activar su habilidad inmediatamente después de que uno de tus Oros sea afectado por una ",
+                "habilidad oponente (Incluyendo Letanía). Ejemplo: Si juegan Joyero a una Letanía o cualquiera de tus otros oros, puede activar su habilidad para prevenir que ",
+                "cualquier de ellos sea afectado por Joyero, por lo que evitas que tu oponente gane el control de uno de tus Oros y Letanía es subida a tu Mano.",
+            ]
+        },
+        {
+        id: 72,
+        pregunta: "¿Cómo se resuelve Averix el Sabio? (FAQ)",
+        respuesta: [
+                "La Habilidad de Averix el Sabio posee una Errata para mejor entendimiento y es la siguiente: Mientras Averix el Sabio esté en juego, tu oponente no puede activar ",
+                "habilidades que duren hasta el Final del Turno o hasta la Fase Final. Esto quiere decir que, tu oponente no puede activar ninguna habilidad que dure hasta el Final ",
+                "del Turno o hasta la Fase Final, independientemente de que su duración no esté de forma explícita en la carta. Averix el Sabio no afecta a los Talismanes.",
+            ]
+        },
+        {
+        id: 73,
+        pregunta: "Niña de la Suerte y habilidades disparadas. Ejemplo con Gruagash para mejor entendimiento (FAQ)",
+        respuesta: [
+                "Para un mejor entendimiento, las cartas mostradas con Niña de la Suerte deben cumplir con todos los requisitos que tengan, como costes adicionales y/o condiciones ",
+                "específicas en que se puedan jugar. Si ambas cartas cumplen lo necesario para entrar en juego y tuviesen habilidades disparadas, independiente de que habilidad ",
+                "sea, ambas disparan su habilidad, pero siempre partiendo por el jugador que jugó Niña de la Suerte. Ejemplo: Pedro, juega Gruagash, Marcela juega Sir Tristan, en ",
+                "este caso independiente de la habilidad de Gruagash ambos disparan su habilidad y luego Sir Tristan será barajado en su Mazo Castillo.",
+            ]
+        },
+        {
+        id: 74,
+        pregunta: "¿Cuántas Horda Fomore puedo poner desde el Cementerio en mi mano por turno? (FAQ)",
+        respuesta: [
+                "Errata: 'Si Horda Fomore está en tu Cementerio puedes desterrar un Aliado de raza Sombra de tu Cementerio para poner a Horda Fomoré en tu Mano. Sólo puedes activar una ",
+                "Horda Fomore por turno.' Por lo tanto sólo puedes subir una Horda Fomore por turno a tu mano.",
+            ]
+        },
+        {
+        id: 75,
+        pregunta: "Con Brian Boru, ¿Puedo hacer objetivo a un Aliado en línea de Defensa que no pueda ser declarado atacante? (FAQ)",
+        respuesta: [
+                "Si, ya que Brian Boru solo lo está moviendo de Zona de juego. En ningún momento lo declara atacante. Por lo tanto un Aliado que solo puede bloquear, puede ser movido a la ",
+                 "Línea de Ataque.",
+            ]
+        },
+        {
+        id: 76,
+        pregunta: "¿Cuántas cartas puede barajar Caturix? (FAQ)",
+        respuesta: `Su efecto dice que puede barajar HASTA cuatro cartas. Y se pueden combinar entre Oros y Aliados de raza Desafiante.
+        Por lo tanto puedes barajar:
+
+        • 4 oros + 0 Aliados
+        • 3 oros + 1 Aliado
+        • 2 oros + 2 Aliados
+        • 1 Oro + 3 Aliados
+        • 0 oros + 4 Aliados
+        • 3 oros
+        • 3 Aliados
+        • 2 oros
+        • 2 Aliados
+        • etc.
+
+        La cantidad de cartas barajadas jamás puede ser mayor a 4, pero su habilidad al tener un HASTA redactado pueden ser menos.
+        `
+        },
+        {
+        id: 77,
+        pregunta: "¿Qué pasa si ambos jugadores tienen 2 cartas en el Mazo Castillo? (FAQ)",
+        respuesta: [
+                "En caso de que se de que ambos jugadores tienen 2 cartas en el Mazo Castillo, será un empate. Árbol de Sangre. Para este efecto, los jugadores deben Botar 2 ",
+                "cartas al mismo tiempo, de una en una. Si al Botar cartas una en una, uno de los jugadores queda sin cartas en su Mazo Castillo, perderá el duelo. Se puede dar ",
+                 "el caso de que ambos jugadores tengan 2 o menos cartas en su Mazo Castillo y si es la misma cantidad, el duelo termina en empate.",
+            ]
+        },
+        {
+        id: 78,
+        pregunta: "Si Corff es declarado atacante, ¿Podrá darse fuerza a sí mismo? (FAQ)",
+        respuesta: [
+                "No, ya que solo podrá bonificar a Aliados que lo acompañen en el ataque (hasta 2). Pero si declaro ataque con 2 Corff entre ellos podrán darse fuerza sin ",
+                "problema. En resumen, si ataca en solitario, su fuerza es 1.",
+            ]
+        },
+        {
+        id: 79,
+        pregunta: "¿Puedo redirigir el efecto de Aplastar Fomor con Relámpago Arcano a otro Aliado en juego? (FAQ)",
+        respuesta: [
+                "No, ya que Aplastar Fomor es un efecto global y por lo tanto no se podría redirigir a otro Aliado en juego.",
+            ]
+        },
+        {
+        id: 80,
+        pregunta: "Con Aed, si mi oponente controla sólo un Aliado, puedo subirlo a la Mano? (FAQ)",
+        respuesta: [
+                "No, ya que en este caso el efecto de Subir 2 Aliados a La Mano se debe resolver por completo, tal como se aclaró con el Aliado Vouivre.",
+            ]
+        },
+        {
+        id: 81,
+        pregunta: "¿En qué Fase del juego se puede utilizar la habilidad Salmón del Saber? (FAQ)",
+        respuesta: [
+                "Conforme a lo expuesto por el DAR respecto a las Fases del juego y lo indicado en la habilidad propia de la carta, esta se dispara en la Fase de Batalla ",
+                "Mitológica, una vez terminada la Guerra de Talismanes y comenzada la Sub Fase de Asignación de Daño. Cuando se calcula el total del daño resultante de la ",
+                "diferencia entre los Aliados atacantes y Aliados bloqueadores, es cuando se dispara la habilidad de esta carta.",
+            ]
+        },
+        {
+        id: 82,
+        pregunta: "¿Si un Aliado que porte una o más Armas es puesto en la parte superior del Mazo Castillo de su dueño con cartas como Zorro de Fuego, ¿En qué orden quedan las cartas? (FAQ)",
+        respuesta: [
+                "Para resolver la habilidad de Zorro de Fuego, el Aliado debe quedar siempre en la parte superior del Mazo Castillo, por lo tanto si porta una o más armas, las ",
+                "cartas serán devueltas al Mazo en el orden inverso al que entraron en juego en el Mazo Castillo de su Dueño.",
+            ]
+        },
+        {
+        id: 83,
+        pregunta: "¿Cuántos Oros tengo que pagar para jugar a Kurick el Picto? (FAQ)",
+        respuesta: [
+                "La habilidad de Kurick, el Picto es una condición para poder jugarlo esto quiere decir que: No puedes destruir los Oros que están siendo utilizados para pagar el ",
+                "coste de Kurick, el Picto. En resumen, debes tener al menos 4 oros en juego para jugar Kurick, el Picto ",
+            ]
+        },
+        {
+        id: 84,
+        pregunta: "¿Si tengo Macha o Serpiente Roja en juego, y activo la habilidad de Boobrie del Cementerio, ¿En la Fase Final es Destruido? (FAQ)",
+        respuesta: [
+                "Es una jugada válida, si Macha está en juego (propia u oponente), y en Respuesta a una declaración de ataque traes desde el Cementerio un Boobrie para bloquear, ", 
+                "este no se destruiría al final del turno, por comparación de fuerza o por el efecto de su propia habilidad. Este efecto también aplica si hay una Serpiente Roja en ",
+                "juego. Siendo el mismo resultado.",
+            ]
+        },
+        {
+        id: 85,
+        pregunta: "¿Como se resuelve País sin Luz y Caldero de la Abundancia? (FAQ)",
+        respuesta: [
+                "Ambas son cartas en respuesta, pero siempre hay que tener en consideración el orden y momento para jugar o activar dichas cartas, esto quiere decir que: En el caso ",
+                "que un Aliado fuese destruido, se debería jugar inmediatamente Caldero de la Abundancia para que fuera una jugada válida, no obstante el orden en este caso sería ",
+                "resolver primero la carta que está en juego (País sin Luz) y luego Caldero de la Abundancia.", 
+            ]
+        },
+        {
+        id: 86,
+        pregunta: "¿Puedo cancelar la habilidad de Tuatha de Danaan con Siete contra Tebas? (FAQ)",
+        respuesta: [
+                "Si, ya que puedes cancelar cualquier habilidad activada o disparada que se active desde el juego (No se puede cancelar habilidades continuas). En este caso el ",
+                "orden correcto es pagar su coste de activación (Subirla a la mano), luego inmediatamente después de dicha acción se debe jugar Siete contra Tebas para cancelarla, ",
+                "quedando Tuatha de Danaan en la mano y sin el efecto de robar dos cartas.",
+            ]
+        },
+        {
+        id: 87,
+        pregunta: "¿En respuesta a un ataque oponente, juego Devorador de Almas con Levantar a los Muertos, ¿se activa la habilidad de Devorador de Almas? (FAQ)",
+        respuesta: [
+                "No, por que Levantar a los Muertos, especifica que el Aliado debe ser declarado bloqueador por lo que ya estaría en asignación de bloqueo y no de ataque. ",
+                "Esto quiere decir que: Levantar a los Muertos se juega al comienzo de la Declaración de Ataque, y Devorador de Almas no se encuentra en juego en ese momento ",
+                "para activar su habilidad.",
+            ]
+        },
+        {
+        id: 88,
+        pregunta: "Si controlo Macda Tho, ¿Cuánta fuerza tendrán los Aliados Imbloqueables que me ataquen? (FAQ)",
+        respuesta: [
+                "La habilidad de Macda Tho se dispara cuando los Aliados no sean bloqueados, por lo tanto los Aliados imbloqueables tendrán Fuerza 1 hasta la Fase Final. Esta ",
+                "habilidad de Macda Tho podría ser cancelada con un Siete contra Tebas ",
+            ]
+        },
+        {
+        id: 89,
+        pregunta: "Si mi oponente juega Qadesh y controlo a Cuchulain y varios Aliados de raza Defensor, puedo destruir otro Defensor para salvarlo? (FAQ)",
+        respuesta: "Si, ya que es una habilidad de Prevención, por lo tanto se antepone al efecto de Qadesh. ",
+        },
+        {
+        id: 90,
+        pregunta: "¿Si mi oponente juega Carmix o Eolo, puedo en respuesta desterrar Ojo Udyat? (FAQ)",
+        respuesta: [
+                "Si, ya que Ojo Udyat se dispara al momento de que se juegue la carta, antes que entre en juego. Se aclara que 'jugar' la carta es previo a que esté en juego, ",
+                "por lo que, para este caso, es posible sin inconvenientes. Lo mismo pasaría en caso de que el oponente juegue Eolo, puedo generar la misma interacción con Ojo ",
+                "Udyat y traer el Tótem Casa de Hestia para proteger mis Oros de la habilidad de Eolo.",
+            ]
+        },
+        {
+        id: 91,
+        pregunta: "La habilidad de Lugaid, ¿Se considera disparada o continua? (FAQ)",
+        respuesta: [
+                "Nos referimos a la segunda habilidad que chequea si Cuchulain está en juego. Podrá atacar el turno que es puesto en juego si Cuchulain está o estará en el mismo ",
+                "turno que se jugó Lugaid y además ambos serán imbloqueables si Cuchulain y Lugaid se mantienen en juego. En este caso Lugaid posee una Habilidad Continua y su ",
+                "condicionante es que este Cuchulain en juego. ",
+            ]
+        },
+        {
+        id: 92,
+        pregunta: "¿Por qué Chike de la Sombra no puede ser jugado en Guerra de Talismanes, pero si Druida Maldito? (FAQ)",
+        respuesta: [
+                "A diferencia de Chike de la Sombra, Druida Maldito si puede ser jugada en Guerra de Talismanes, ya que es explícita en su habilidad. Chike de la Sombra solo puede ",
+                "ser jugado en Fase de Vigilia, que es donde se pueden jugar Aliados.",
+            ]
+        },
+        {
+        id: 93,
+        pregunta: "¿Puedo hacer daño de combate con Sehetepibre y destruirlo para hacer más daño por su habilidad? (FAQ)",
+        respuesta: [
+                "Sehetepibre puede ser declarado atacante, pero no podría realizar ambos daños en el mazo oponente, si se mantiene en juego en la Batalla Mitológica, en la Fase de ",
+                "Asignación de daño (su fuerza o la diferencia de esta si fue bloqueado), pasará como daño al Mazo oponente o puedes destruirlo para que genere daño equivalente a su ",
+                "fuerza de manera directa.",
+
+            ]
+        },
+        {
+        id: 94,
+        pregunta: "¿Debo pagar el coste del Tótem jugado con Ojo Udyat? (FAQ)",
+        respuesta: [
+                "Se aplica este efecto por la reedición de la carta en Leyendas Primer Bloque 3.0 Ejemplo: Jugador oponente juega una Bola de Fuego un aliado en juego (Afrodita), ",
+                "inmediatamente después de dicha acción, puedo desterrar Ojo Udyat desde la Reserva de Oros y buscar un Tótem en el Mazo Castillo y Jugarlo pagando su coste. ",
+            ]
+        },
+        {
+        id: 95,
+        pregunta: "¿Guiza puede transformarse para atacar? (FAQ)",
+        respuesta: [
+                "Por regla general de Autorreferencia, Guiza no puede ser afectada por su propia habilidad, es decir, no puede utilizar el efecto de considerarse un Aliado en sí ",
+                "misma. Solo podría ser declarada atacante si por efecto de otra carta se convierte o considera un Aliado, como por ejemplo otra copia de Guiza en campo oponente.",
+            ]
+        },
+        {
+        id: 96,
+        pregunta: "¿Qué pasa si le quito la habilidad a Aliados como Takelot o Temistocles? (FAQ)",
+        respuesta: [
+                "Si alguno de los Aliados en cuestión (Takelot y Temistocles), pierden su habilidad, las cartas nombradas por ellos volverían a recuperar su habilidad, a su vez si ",
+                "Takelot o Temístocles recuperan su habilidad nuevamente las cartas nombradas por ellos volverían a perder la habilidad.",
+            ]
+        },
+        {
+        id: 97,
+        pregunta: "¿Cómo funciona Relámpago Arcano? (FAQ)",
+        respuesta: `Relámpago Arcano es una redirección por ende se juega inmediatamente después que tu oponente juegue una carta o active una 
+        habilidad que afecte a una de tus cartas en juego que no sea Oro, al redirigir el efecto, siempre será mandante la habilidad de la carta que jugó o activo tu oponente.
+
+        Por lo tanto el objetivo a redirigir debe ser válido:
+
+        • Ejemplo 1: Si tu oponente te juega una Bola de Fuego, inmediatamente juegas Relámpago Arcano redirigiendo la habilidad 'Destruye 
+        una carta en juego que no sea Oro',  ya que es la habilidad Mandante de Bola de Fuego y podrías redirigir la habilidad a cualquier carta en juego que no sea Oro. 
+        • Ejemplo 2: Si tu oponente juega Haquika (Cuando Haquika entra en juego, puedes elegir un Aliado oponente y ponerlo en tu Línea de 
+        Defensa.), inmediatamente puede jugar Relámpago Arcano y redirigir dicha habilidad a otro de tus aliados, ya que la habilidad mandante de Haquika es que sea un Aliado oponente.
+        • Ejemplo 3: Si tu oponente activa Kennet I (Puedes desterrar a Kenneth I para que una carta en juego y todas sus copias, pierdan su 
+        habilidad hasta la Fase Final.), no puedes jugar Relámpago Arcano para redirigir dicho efecto, ya que la habilidad de Kenneth I se considera como global / universal. Mismo ejemplo para interacción con Thanatos.
+        • Ejemplo 4: Si tu oponente activa Neferite I (En tu Fase de Vigilia, sólo una vez por turno, puedes desterrar tantas cartas de tu 
+        Cementerio como coste tenga una carta en juego para desterrarla.), inmediatamente puedes jugar Relámpago Arcano y redirigir dicha 
+        habilidad a otra carta en juego que no sea Oro. Pero no puedes hacer objetivo a Neferite I, ya que por regla de Autoreferencia (DAR 4.6.11) no puede desterrarse a sí mismo.
+        `
+        },
+
+
+
 
 
 
