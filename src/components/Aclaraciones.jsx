@@ -54,7 +54,7 @@ export default function Aclaraciones () {
         {
         id: 8,
         pregunta: "Respecto a la carta Campesino, ¿Si le coloco una daga de bote, puedo usar su habilidad (de Campesino)?",
-        respuesta: "No, ya que la Daga de Bote no permite que se utilicen habilidades que impliquen destruir a un Aliado, ya que su función es justamente lo opuesto."
+        respuesta: "No, la Daga de Bote no permite que se utilicen habilidades que impliquen destruir a un Aliado, ya que su función es justamente lo opuesto."
         },
         {
         id: 9,
@@ -171,7 +171,7 @@ export default function Aclaraciones () {
         },
         {
         id: 24,
-        pregunta: "¿La carta que destruya a Wyvern debe ser desterrada? (FAQ)",
+        pregunta: "¿La carta que destruya a Wyvern debe ser desterrada?¿Que pasa en este caso con Bola de Fuego y Fergus? (FAQ)",
         respuesta: `Cualquier carta que destruya a Wyvern será Desterrada. 
 
         Esta puede ser por ejemplo:
@@ -181,7 +181,7 @@ export default function Aclaraciones () {
         },
         {
         id: 25,
-        pregunta: "Colmillo negro y modificaciones de fuerza posteriores (FAQ)",
+        pregunta: "Colmillo negro y modificaciones de fuerza posteriores, ¿Cómo se resuelve al jugarla con Macha? (FAQ)",
         respuesta: [
                 "En este caso particular, hay que tener en cuenta que tipo de habilidad tiene Colmillo Negro, esta posee una Habilidad Continua y por definicion esta se ",
                 "antepondra siempre a cualquier modificador de fuerza posterior a que dicha Arma sea portada en un Aliado en Juego.",
@@ -224,9 +224,9 @@ export default function Aclaraciones () {
         },
         {
         id: 31,
-        pregunta: "¿Qué pasa con Juramento Feérico buscando Armas y portando a Aliados que no pueden ser declarados atacantes? (FAQ)",
+        pregunta: "¿Qué pasa con Juramento Feérico buscando Armas y portando a Aliados que no pueden ser declarados atacantes (Ptah, Osiris, Ay)? (FAQ)",
         respuesta: [
-                "En este caso, el Arma que esté siendo jugada con Juramento Feérico a un Aliado que no esté habilitado para atacar, (por ejemplo Ptha, Osiris, Ay), no podrán ",
+                "En este caso, el Arma que esté siendo jugada con Juramento Feérico a un Aliado que no esté habilitado para atacar, (por ejemplo Ptah, Osiris, Ay), no podrán ",
                 "ser declarados Atacantes.",
             ]
         },
@@ -264,7 +264,7 @@ export default function Aclaraciones () {
         },
         {
         id: 36,
-        pregunta: "¿Crear fungoides haciendo objetivo a Aliados indestructibles? (FAQ)",
+        pregunta: "¿Crear fungoides haciendo objetivo a Aliados indestructibles?¿Que pasa con Cruz Tempplaria y Crear Caballero Negro en esta situación? (FAQ)",
         respuesta: [
                 "Esta sería una jugada completamente válida, ya que cuando se realizan búsquedas en el Mazo Castillo (Zona Privada), no se realizan comprobaciones de ",
                 "requisitos o condiciones de juego para resolver el Talismán en cuestión 'Crear Fungoides'. Caso similar sería con Cruz Templaria, se podría buscar un ",
@@ -364,7 +364,7 @@ export default function Aclaraciones () {
         },
         {
         id: 49,
-        pregunta: "¿Cómo se resuelve Escudo de Atenea? (FAQ)",
+        pregunta: "¿Cómo se resuelve Escudo de Atenea?¿Como funciona con Eolo y Rayos? (FAQ)",
         respuesta: [
                 "La habilidad de Escudo de Atenea es una Redirección, por ende cuando utilices su habilidad, su portador no se vería afectado. Siempre hay que tener en ",
                 "cuenta que el nuevo objetivo debe ser válido para poder llevar a cabo la Redirección. Por regla general los efectos globales no pueden ser Redirigidos, ",
@@ -397,7 +397,7 @@ export default function Aclaraciones () {
         },
         {
         id: 53,
-        pregunta: "¿Cómo se resuelve Arde Troya? (FAQ)",
+        pregunta: "¿Cómo se resuelve Arde Troya y como funciona con Felipe II? (FAQ)",
         respuesta: [
                 "La Habilidad de Arde Troya posee una Errata para mejor entendimiento y es la siguiente: 'Anula o cancela una carta que afecte a los Oros en juego. Si la ",
                 "carta es cancelada, destrúyela. Si juegas Arde Troya en el turno oponente, éste pasa directamente a la Fase Final'. Ejemplo: Si el oponente en su Turno ",
@@ -480,6 +480,15 @@ export default function Aclaraciones () {
                 "No, de acuerdo con el DAR 'Julio 2021' en su apartado 5.3.4 'Asignación de Daño', 'acciones de esta etapa', en los puntos principales se especifica que ",
                 "en primera instancia el jugador defensor recibe el daño resultante del cálculo de fuerzas entre el(los) aliado(s) oponente(s) declarado(s) atacante(s) y ",
                 "su(s) aliado(s) bloqueador(es), para luego pasar a la etapa de la destrucción (en caso de que los aliados puedan ser destruidos) por diferencia de fuerzas.",
+            ]
+        },
+        {
+        id: 63,
+        pregunta: "Si una carta afectada por Forma Estelar sale del juego y vuelve a entrar posteriormente, ¿Recupera su habilidad? (FAQ)",
+        respuesta: [
+                "Si, una vez resuelta la habilidad de Forma Estelar, se considera que la carta pierde su caja de texto de habilidad solo mientras esté en juego. Recordar, ",
+                "que siempre conservará sus atributos de carta (ejemplo, si es un Aliado, seguirá teniendo su Coste y Fuerza impresos, si es un Tótem o Arma conservará su ",
+                "coste). Si la carta sale del juego y vuelve a entrar, esta vuelve con su habilidad.",
             ]
         },
 
