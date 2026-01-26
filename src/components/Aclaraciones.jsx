@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-//SEGUIR CON EL FAQ, ULTIMA AGREGADA: 98/143
+//SEGUIR CON EL FAQ, ULTIMA AGREGADA: 118/143
 export default function Aclaraciones () {
     // 1. Estado para manejar qué pregunta está abierta
     const [abierta, setAbierta] = useState(null);
@@ -627,9 +627,9 @@ export default function Aclaraciones () {
         },
         {
         id: 77,
-        pregunta: "¿Qué pasa si ambos jugadores tienen 2 cartas en el Mazo Castillo? (FAQ)",
+        pregunta: "¿Qué pasa si ambos jugadores tienen 2 cartas en el Mazo Castillo y juego Arbol de Sangre? (FAQ)",
         respuesta: [
-                "En caso de que se de que ambos jugadores tienen 2 cartas en el Mazo Castillo, será un empate. Árbol de Sangre. Para este efecto, los jugadores deben Botar 2 ",
+                "En caso de que se de que ambos jugadores tienen 2 cartas en el Mazo Castillo, será un empate. Arbol de Sangre. Para este efecto, los jugadores deben Botar 2 ",
                 "cartas al mismo tiempo, de una en una. Si al Botar cartas una en una, uno de los jugadores queda sin cartas en su Mazo Castillo, perderá el duelo. Se puede dar ",
                  "el caso de que ambos jugadores tengan 2 o menos cartas en su Mazo Castillo y si es la misma cantidad, el duelo termina en empate.",
             ]
@@ -809,15 +809,314 @@ export default function Aclaraciones () {
         habilidad a otra carta en juego que no sea Oro. Pero no puedes hacer objetivo a Neferite I, ya que por regla de Autoreferencia (DAR 4.6.11) no puede desterrarse a sí mismo.
         `
         },
+        {
+        id: 98,
+        pregunta: "Puedo jugar un Chike de la Sombra en la Guerra de Talismanes? (FAQ)",
+        respuesta: [
+                "No. Ya que si bien la habilidad de Chike de la Sombra nos permite ser jugado desde el Cementerio, no es posible jugarlo en la Guerra de Talismanes. Esto es, porque ",
+                "debido a que su habilidad no tiene un gatillante respecto a alguna fase del juego en específico, puede sólo ser activada en la Fase de Vigilia del propietario.",
+            ]
+        },
+        {
+        id: 99,
+        pregunta: "Si el Aliado portador es Destruido la habilidad de Gran Khopesh hará que mi oponente bote cartas de su Mazo Castillo? (FAQ)",
+        respuesta: [
+                "No, ya que por regla general, para que el efecto de dicha habilidad se resuelva, Gran Khopesh debería estar en juego y como fue destruido su portador no ",
+                "tendría efecto en el campo. ",
+            ]
+        },
+        {
+        id: 100,
+        pregunta: "Si tengo Beni Hassan y Kom Ombo en juego, ¿El daño de Menhit cuanto sería?¿Y para el caso de Colosos Hititas? (FAQ)",
+        respuesta: [
+                "La habilidad de Menhit, de pagar 2 oros para desterrar la primera, no se ve beneficiada por Kom Ombo ya que no es daño directo, ni tampoco se verá ",
+                "limitada por Beni Hassan ya que al no considerarse daño directo, no hay problema en desterrar la primera. Pasa lo mismo con Colosos Hititas. ",
+            ]
+        },       
+        {
+        id: 101,
+        pregunta: "Si pago 1 oro con Heka y durante el turno este Aliado sale del juego, ¿Robo en la Fase Final? (FAQ)",
+        respuesta: [
+                "Si, ya que el efecto ya fue pagado y debe resolverse aunque la fuente no esté en juego. Es un efecto que debe resolverse en la Fase Final. Cabe destacar ",
+                "que si se paga 1 oro, el robo extra es obligatorio en la Fase Final.",
+            ]
+        },
+        {
+        id: 102,
+        pregunta: "Si no tengo más Aliados en juego. ¿Puedo Destruir a Principe Djedi para hacer dos de daño? (FAQ)",
+        respuesta: [
+                "No, ya que por la regla de Auto-Referencia se indica que la Fuente del efecto nunca puede ser Objetivo del mismo efecto. ",
+            ]
+        },
+        {
+        id: 103,
+        pregunta: "La habilidad de entrada, el robo de Djedefhor, ¿Es obligatorio? (FAQ)",
+        respuesta: [
+                "El robo es obligatorio, a menos que exista una restricción de robo en juego que no lo permita, como por ejemplo que un jugador controle una Islas Filas.",
+            ]
+        },
+        {
+        id: 104,
+        pregunta: "Puedo atacar con un Aliado que acaba de entrar en juego teniendo en juego Corona Faraonica? (FAQ)",
+        respuesta: [
+                "En este caso, si no controlo Aliados Faraón y el Aliado entrante es el primero que pongo en juego, este no podrá ser afectado por Corona Faraónica.",
+            ]
+        },
+        {
+        id: 105,
+        pregunta: "¿Puedo jugarle Capa de Invisibilidad a Seshat? (FAQ)",
+        respuesta: [
+                "A diferencia del caso anterior, Seshat puede ser afectada por Talismanes, pero cuando entra en juego busca un Arma y la pone en juego sin pagar su coste. ",
+                "Por lo tanto mientras el Arma esté en juego Seshat no podrá salir de él. Debido a esto Capa de Invisibilidad no puede ser jugada, ya que al entrar Seshat, ",
+                "el Arma al estar en juego impediría que Seshat sea barajada por Capa de Invisibilidad.",
+            ]
+        },
+        {
+        id: 106,
+        pregunta: "¿Puedo destruir a Nemty para barajar una carta oponente? (FAQ)",
+        respuesta: [
+                "No es una jugada válida. Esto es debido a que no se puede hacer autorreferencia a la fuente de la habilidad. Nemty no puede destruirse a sí mismo para barajar ",
+                "una carta oponente.",
+            ]
+        },
+        {
+        id: 107,
+        pregunta: "¿Puedo intentar Cancelar la habilidad de Oseye 'Puede atacar el turno que entra en juego' con Siete contra Tebas? (FAQ)",
+        respuesta: [
+                "No, debido a que es una habilidad continua, que posibilita al Aliado que la posee para atacar cuando entra en juego. Cabe Señalar, que cuando un Aliado cambia ",
+                "de controlador estando en juego y cuenta con esta habilidad, no se encontrará habilitado para atacar, puesto que ya se encontraba en juego.",
+            ]
+        },
+        {
+        id: 108,
+        pregunta: "¿Puedo desterrar cartas de coste cero con Neferite I, como Kobold? (FAQ)",
+        respuesta: [
+                "Si, ya que cero es un coste, y Neferite I solo especifica que se debe desterrar tantas cartas como coste tenga una carta para desterrarla, El ejemplo más común, ",
+                "sería poder desterrar un Kobold. Esto sucede declarando la activación de la habilidad de Neferite I, haciendo objetivo a Kobold.",
+            ]
+        },
+        {
+        id: 109,
+        pregunta: "Interacción de Amon con Sir Persival o similares (FAQ)",
+        respuesta: [
+                "La habilidad de Amon se dispara cada vez que lo hagan objetivo, se deben pagar 2 oros adicionales. Esto quiere decir que: Cuando Sir Persival entra en juego, debe ",
+                "pagar 2 oros adicionales para resolver su habilidad disparada contra Amon.",
+            ]
+        },
+        {
+        id: 110,
+        pregunta: "Interacción de Amon con Talismanes (FAQ)",
+        respuesta: [
+                "La habilidad de Amón se dispara cada vez que lo hagan objetivo, se deben pagar 2 oros adicionales. Esto quiere decir que: Cuando Sir Persival entra en juego, debe ",
+                "pagar 2 oros adicionales para resolver su habilidad disparada contra Amón.",
+            ]
+        },
+        {
+        id: 111,
+        pregunta: "¿Cómo se resuelve Gruagash y Akenathon? (FAQ)",
+        respuesta: [
+                "Al entrar en juego Gruagash, dispara su habilidad completa, quitando la habilidad a todos los demás Aliados en juego y los baraja. Al estar Akenathon en juego, ",
+                "previene que los demás Aliados sean afectados por habilidades oponentes, es por esto que solo se baraja Akenathon y los demás Aliados oponentes permanecen en juego.",
+            ]
+        },
+        {
+        id: 112,
+        pregunta: "Si le porto Carro Celta a Dario el Grande, ¿Este es afectado por la habilidad del Arma? (FAQ)",
+        respuesta: [
+                "Las habilidades de todas estas cartas se disparan en la Fase Final, siendo el controlador de Dario el Grande quien decide cuál activar primero. Lo óptimo sería, subir ",
+                "a su mano a Dario el Grande para que no sea afectado por la Habilidad del Arma portada. El Arma sigue al Aliado, en este caso iría a la Mano.",
+            ]
+        },
+        {
+        id: 113,
+        pregunta: "Si mi oponente ganó el control de uno de mis Aliados con Haquika y yo juego Guardia Gozosa en Haquika, ¿El Aliado que fue objetivo de Haquika vuelve a mi control? (FAQ)",
+        respuesta: [
+                "No podría devolver al Aliado, ya que Haquika tiene una habilidad de entrada la cual es tomar el control de un Aliado oponente y también cuenta con una habilidad de salida, ",
+                "la cual es: Devolver el Aliado a su controlador cuando esta sale del juego, por lo cual al jugar Guardia Gozosa en Haquika esta ya no tendría la habilidad cuando salga del ",
+                " juego.",
+            ]
+        },
+        {
+        id: 114,
+        pregunta: "Si declaro ataque con Ramses II y mi oponente declara bloqueo con Figol El Druida, ¿Puedo hacer que pase el daño como si este no fuera bloqueado? (FAQ)",
+        respuesta: [
+                "Sí, ya que Figol el Druida no cancela el ataque sólo hace que los Aliados atacantes vuelven a la Línea de Defensa, pero se disparan todas las Habilidades producto del bloqueo ",
+                "y continúan todas las siguientes fases del juego, por lo cual el controlador de Ramses II puede disparar su Habilidad en respuesta al bloqueo.",
+            ]
+        },
+        {
+        id: 115,
+        pregunta: "Si controlo un Esna, y juego un Aliado pero este es anulado, ¿Puedo robar? (FAQ)",
+        respuesta: "Si, ya que Esna se dispara en el paso 4 de cuando se juega una carta. Primero se roba la carta y luego se anulará el Aliado.",
+        },
+        {
+        id: 116,
+        pregunta: "¿Desde que Zona de juego ganaré el control del Aliado con Neferura? (FAQ)",
+        respuesta: [
+            "En este caso particular la redacción de Neferura será la siguiente: 'Cuando entra en juego, puedes elegir un Aliado oponente de Coste 1 o menos y ponerlo ",
+            "bajo tu control hasta que Neferura salga del juego'. El Aliado se entiende que debe estar controlado por tu oponente, por lo tanto debe estar en juego. ",
+            ]
+        },
+        {
+        id: 117,
+        pregunta: "¿Puedo responder con Cárcel para el Mal cuando mi oponente juegue un Dragón de Magma o Desleal? (FAQ)",
+        respuesta: [
+            "Errata: 'Anula un Talismán que Destruya o Destierre uno de tus Aliados o Cancela una habilidad oponente, que Destruya o Destierre un Aliado que controles'. ", 
+            "Con esto se entiende que en caso de jugar un Desleal, el Talismán será Anulado. Y cuando mi oponente juegue un Dragón de Magma, este entrará en juego, pero ",
+            "su habilidad disparada de Destruir un Aliado, no se resolverá. Cárcel para el mal, no anula Talismanes con efectos globales. Pero si puede Anular Plaga, ya ",
+            "que esta hace objetivo a dos de tus Aliados.",
+            ]
+        },
+        {
+        id: 118,
+        pregunta: "¿En qué momento Ptolomeo III puede hacer daño? ¿Se cuenta a sí mismo? (FAQ)",
+        respuesta: [
+            "La habilidad de Ptolomeo III es una habilidad disparada que se resuelve cada vez que un Aliado Faraón que controles entre o salga del juego. Podemos considerar ",
+            "esta habilidad como una habilidad disparada en respuesta. Para hacer daño, Ptolomeo II debe estar en juego, no hace daño por sí mismo cuando entra o cuando sale ",
+            "del juego. Un removal masivo que afecte a tus Faraones como por ejemplo Qadesh, no disparará el daño al Mazo Castillo oponente.", 
+            ]
+        },
+        {
+        id: 119,
+        pregunta: "¿Puedo nombrar la Raza Faraón con Cleopatra? (FAQ)",
+        respuesta: [
+            "No puede, debido a que al Nombrar 'Afectar' la raza Faraón, estaría afectando sus propias condiciones originales impresas, esto quiere decir que no podría afectarse ",
+             "a sí misma por regla de Auto-Referencia. ",
+            ]
+        },
+        {
+        id: 120,
+        pregunta: "¿Hasta qué momento la carta afectada por Resplandor de Heka pierde su habilidad? ¿Cómo funciona con Guardia Real, Bruja Anis y Leonidas? (FAQ)",
+        respuesta: `• Caso 1: Guardia Real, para este caso en el momento que entre en juego, lo hará sin habilidad y permanecerá sin ella “Hasta el inicio de 
+        la Fase Final” , es por ello que ya en la Fase Final como tal, Guardia real tendría habilidad y se resolveria que no atacó y es por ello que deberá ser destruido.
+        • Caso 2: Bruja Anis y Leonidas, para ambos casos entrarían sin habilidad y permanecerán sin ella 'Hasta el inicio de la Fase Final', pero
+        como su habilidad lo dice, en la Fase Final como tal, podría robar una carta.
+        `
+        },
+        {
+        id: 121,
+        pregunta: "¿En qué momento puedo jugar Resplandor de Heka? (FAQ)",
+        respuesta: [
+            "El Timing correcto para jugarlo es en el de las Anulaciones como el siguiente ejemplo: Red de plata VS Resplandor de Heka. En este caso en particular ambas cartas ",
+            "se pueden jugar en el mismo momento, teniendo el jugador que elegir con cual interactuar y por ende excluir a la otra. Luego de eso ya se podrian jugar cartas ",
+            "como Capa de Invisibilidad o Siete contra Tebas.",
+            ]
+        },
+        {
+        id: 122,
+        pregunta: "¿La carta nombrada con Nehebaku debe estar en juego?, y se refiere a todas las copias? (FAQ)",
+        respuesta: 
 
-
-
-
-
-
+            <> Para esta resolución en particular hay que tener en cuenta de la diferencia entre Nombrar y Elegir. <strong>Nombrar</strong>: Hace alusión a cualquier carta independiente si está 
+            o no en juego y considera siempre todas las copias (A menos que una condición o efecto no lo permitiese). <strong>Elegir</strong>: Hace alusión a cartas en juego y por lo general
+            es solo una carta, a menos que se especifique que serían todas las copias. En consecuencia, Nehebaku afecta a cualquier Aliado esté o no en juego y además afecta 
+            a todas las copias del mismo. 
+        </>
+        },
+        {
+        id: 123,
+        pregunta: "Con Asaltar la Caravana ¿Que pasa si hago objetivo a un Aliado que esté bloqueando? (FAQ)",
+        respuesta: [
+            "Ese Aliado deja de bloquear y en la Fase de asignación de daño, el daño del Aliado atacante pasará completo al Mazo Castillo oponente (Esto siempre que no ",
+            "existan efectos que reduzcan el Daño que se reciba al Mazo). ",
+            ]
+        },
+        {
+        id: 124,
+        pregunta: "Si destierro una carta de mi Cementerio, puedo NO robar una carta con Hacha Lunar?¿Qué pasa si tengo en juego Islas Filas? (FAQ)",
+        respuesta: [
+            "No, ya que el coste de activación ya fue pagado, debe resolverse a menos que sea cancelado o exista alguna restricción de juego como por ejemplo Islas Filas. ",
+            "En caso de estar en juego Islas Filas, podría desterrarme pero no robar. ",
+            ]
+        },
+        {
+        id: 125,
+        pregunta: "Si controlo a Apophis y mi oponente juega Columna de Trajano, ¿Los Aliados oponentes que ya están en juego recuperan su habilidad? (FAQ)",
+        respuesta: [
+            "No, Columna de Trajano tiene una habilidad que especifica el momento en el que comienza a regir. Su habilidad, alude a tiempo presente y futuro, por lo que se ",
+            "protegerán los aliados que se jueguen de manera posterior a que el controlador tenga el tótem en juego y los requisitos para mantener activa la habilidad del ",
+            "mismo.",
+            ]
+        },
+        {
+        id: 126,
+        pregunta: "Al pagar Sarcofago Santuario, ¿Qué Aliados se ven afectadas por el bono de Fuerza? (FAQ)",
+        respuesta: "Sólo las cartas que tengan como nombre 'Drácula'. Rigiéndose por la regla de Concordancia de nombres."
+        },
+        {
+        id: 127,
+        pregunta: "¿Cuales cartas puedo buscar con Renfield? (FAQ)",
+        respuesta: "Solo se podrán buscar cartas con nombre “Drácula”, en el Cementerio o Mazo Castillo. Rigiéndose por la regla de Concordancia de nombres."
+        },
+        {
+        id: 128,
+        pregunta: "¿Puedo jugar Mordida de Dracula, si mi oponente no controla Aliados? (FAQ)",
+        respuesta: [
+            "Para jugar el Talismán se deben cumplir los requisitos, el coste adicional para jugarse la carta, también debe ser pagado. Por lo tanto tanto el Aliado del ",
+            "controlador que juega el Talismán como el Aliado oponente deben poder ser destruidos. Si mi oponente no controla Aliados o sus Aliados no pueden ser destruidos, ",
+            "Mordida de Dracula no puede ser jugada.",
+            ]
+        },
+        {
+        id: 129,
+        pregunta: "Explicación de los términos PARA y CUANDO (FAQ)",
+        respuesta: `PARA: Condición o requisito para poner una carta en juego, estos requisitos siempre se deben cumplir. Ejemplo:
+        • Para que Kurick, el Picto entre en juego, debes destruir 2 Oros.
+        • Para jugar a Montuhopet II, debes devolver a tu Mano uno de tus Aliados de raza Faraón.
+        CUANDO: Concepto con el que las habilidades disparadas más se caracterizan, no son condiciones de juego y siempre ocurren una vez 
+        que la carta sea puesta en juego. Ejemplo:
+        • Cuando Dragón de Magma entra en juego, destruye un Aliado Oponente.
+        • Cuando Sir Persival entra en juego, baraja un Aliado oponente.
+        `
+        },
+        {
+        id: 130,
+        pregunta: "Explicación de los términos Transformar, Considerar, Convertir (FAQ)",
+        respuesta: `Considerar: es el resultado que produce algún efecto o habilidad de una carta sobre otra, añadiendo un nuevo tipo de carta a la ya afectada.
+        • Ejemplo: Mercaderes, cuando mercaderes bloquea nunca deja de ser Oro y en ese momento se “Considera Aliado y Oro”.
+        Transformar y Convertir (En este caso ambos conceptos para efectos del juego son idénticos): Es el resultado que produce algún efecto 
+        o habilidad de una carta sobre otra, cambiando su tipo de carta a la ya afectada.
+        • Ejemplo: Ave de Hera, cuando se activa su habilidad, este deja de ser Oro para “Convertirse en Aliado”, hasta que termine ese efecto dejará de ser Oro.
+        `
+        },
+        {
+        id: 131,
+        pregunta: "Explicación del concepto Prevención (FAQ)",
+        respuesta: [
+            "Prevención es la acción de evitar que una habilidad, efecto o en su defecto por comparación de fuerza (Solo para Aliados) una carta salga del juego. Algunos ",
+            "Ejemplos: Prevención no es una habilidad en respuesta, por ende no se vería afectada por cartas como Micenas. La Prevención se puede ejecutar después de la ",
+            "comparación de fuerza entre 2 Aliados.",
+            ]
+        },
+        {
+        id: 132,
+        pregunta: "¿Cuál habilidad es la que cuenta, si tengo una carta reeditada más de una vez con el mismo nombre? (FAQ)",
+        respuesta: [
+            "Por regla general en Mitos y Leyendas, siempre será válida como oficial la última impresión de una carta en particular, a menos que se especifique lo contrario ",
+             "o que tenga alguna falla de impresión evidente. Existen cartas como Exilio que tiene una nueva versión en la que se ajustó su Coste (Pasó de ser Coste 6 a Coste ",
+             "4) y ahora es Carta Única.",
+            ]
+        },
+        {
+        id: 133,
+        pregunta: "Concordancia de nombres (FAQ)",
+        respuesta: `Se puede dar lo que son las concordancias de nombre, para cumplir esta regla se debe coincidir la raíz del nombre de la carta, sin 
+        importar el resto del nombre de la carta.
+        El efecto de Goblin Stone, dice que puedes buscar una “Carta Goblin” con esta concordancia de nombre, se hace referencia a que 
+        puedas buscar cualquier carta en tu Mazo Castillo que contenga la palabra “Goblin...” en su nombre. Algunos ejemplos:
+        • Goblin Stone
+        • Goblin Maligno
+        • Goblin
+        • Hogoblin
+        • Tótem Goblin
+        • Goblins Navideños
+        • Ataque de Goblins
+        `
+        },
 
 
     ];
+
 
     // LÓGICA DE FILTRADO: 
     // Creamos una lista nueva que solo contiene lo que coincide con la búsqueda
@@ -835,11 +1134,12 @@ export default function Aclaraciones () {
                     <p>
                         En esta sección se aclaran dudas e inquietudes sobre ciertas situaciones que se pueden dar 
                         en las mititos. Se presenta primero la pregunta o duda que surge en una situación del juego
-                        entre dos o mas cartas, y al hacerle click se abre un desplegable con la respuesta en concreto.
+                        entre dos o mas cartas, y al hacerle click se abre un desplegable con la respuesta.
                         Dentro esta toda la información del DAR, FAQ y también y todas las dudas que han salido en el grupo de la 
-                        Champions. Si existen mas dudas háganmelas llegar para agregar toda la información necesaria acá.
+                        Champions o jugando el mismo torneo. 
                     </p>
-                    <p>¡Espero les sirva de ayuda!</p>
+                    <p>Si existen mas dudas háganmelas llegar para agregarlas en esta sección. ¡Espero les sirva de ayuda!</p>
+                    <p><strong>Importante: Para la conicidencia de nombres buscar sin acentos los nombres de las cartas.</strong> </p>
                 </div>
             </section>
 
