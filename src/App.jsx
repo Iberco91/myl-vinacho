@@ -2,12 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Aclaraciones from './components/Aclaraciones';
+import ScrollToTop from "./components/ScrollToTop";
 // Aquí importaremos tus páginas más adelante
 
 function App() {
   return (
     // Router envuelve todo para que los links funcionen
     <Router>
+      <ScrollToTop />
       <div className="contenedor-fijo">
         <header>
           <a href="https://blog.myl.cl/" target="_blank" rel="noopener noreferrer">
