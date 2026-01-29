@@ -1071,7 +1071,7 @@ export default function Aclaraciones () {
         },
         {
         id: 130,
-        pregunta: "Explicación de los términos Transformar, Considerar, Convertir (FAQ)",
+        pregunta: "Explicación de los términos Transformar, Considerar, Convertir (FAQ), cómo funciona con Mercaderes",
         respuesta: `Considerar: es el resultado que produce algún efecto o habilidad de una carta sobre otra, añadiendo un nuevo tipo de carta a la ya afectada.
         • Ejemplo: Mercaderes, cuando mercaderes bloquea nunca deja de ser Oro y en ese momento se “Considera Aliado y Oro”.
         Transformar y Convertir (En este caso ambos conceptos para efectos del juego son idénticos): Es el resultado que produce algún efecto 
@@ -1112,6 +1112,16 @@ export default function Aclaraciones () {
         • Goblins Navideños
         • Ataque de Goblins
         `
+        },
+        {
+        id: 134,
+        pregunta: "Al jugar la habilidad de Ares, ¿Se cancela la Guerra de talismanes? (FAQ)",
+        respuesta: "No, ya que la habilidad de Ares se juega en Guerra de talismanes, por lo tanto si ocurre esta Fase. ",
+        },
+        {
+        id: 135,
+        pregunta: "Las cartas que tienen la habilidad: 'Cancela el ataque oponente', como Saqqara o Flechas de lava, en qué momento se usan? (FAQ)",
+        respuesta: "Las cartas con esta habilidad se usan al momento de declaración de ataque, funcionan de la misma manera que Siete contra Tebas ",
         },
 
 
