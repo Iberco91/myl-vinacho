@@ -1,0 +1,63 @@
+.reproductor-fijo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid #d4af37;
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.info-musica {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre la nota ♫ y el texto */
+  color: white;
+  white-space: nowrap; /* Evita que el texto salte a otra línea si es largo */
+}
+
+.info-musica p {
+  margin: 0; /* MUY IMPORTANTE: El <p> trae margen por defecto que rompe la línea */
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #d4af37;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 1px solid rgba(212, 175, 55, 0.3); /* Una pequeña rayita divisoria */
+  padding-left: 10px;
+}
+
+.controles button {
+  background: none;
+  border: none;
+  color: #d4af37;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.controles button:hover {
+  transform: scale(1.2);
+  color: white;
+}
+
+.nota-musical {
+  color: #d4af37;
+  animation: pulso 2s infinite;
+}
+
+@keyframes pulso {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}

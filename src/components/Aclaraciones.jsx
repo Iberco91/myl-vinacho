@@ -1071,7 +1071,7 @@ export default function Aclaraciones () {
         },
         {
         id: 130,
-        pregunta: "Explicación de los términos Transformar, Considerar, Convertir (FAQ), cómo funciona con Mercaderes",
+        pregunta: "Explicación de los términos Transformar, Considerar, Convertir (FAQ), cómo funciona con Mercaderes.",
         respuesta: `Considerar: es el resultado que produce algún efecto o habilidad de una carta sobre otra, añadiendo un nuevo tipo de carta a la ya afectada.
         • Ejemplo: Mercaderes, cuando mercaderes bloquea nunca deja de ser Oro y en ese momento se “Considera Aliado y Oro”.
         Transformar y Convertir (En este caso ambos conceptos para efectos del juego son idénticos): Es el resultado que produce algún efecto 

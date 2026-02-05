@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Aclaraciones from './components/Aclaraciones';
-import ScrollToTop from "./components/ScrollToTop";
+import Reproductor from './components/Reproductor';
+import ScrollToTop from './components/ScrollToTop';
 // Aquí importaremos tus páginas más adelante
 
 function App() {
@@ -200,6 +201,7 @@ function App() {
                   <img className="imag" src="/ImagenesMyLvsc/vladimir.jpeg" alt="Vladimir" />
                 </div>
               </section>
+              <Reproductor />
             </>
           } />
 
