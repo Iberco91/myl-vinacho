@@ -216,13 +216,34 @@
 /* 5. Botón de cerrar (X) */
 .modal-close {
     position: absolute;
-    top: -50px;
-    right: 0;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 3rem;
+    /* Los valores positivos la mantienen DENTRO del cuadro */
+    top: 15px;
+    right: 15px;
+    
+    /* Creamos un círculo para que resalte sobre la carta */
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    color: #d4af37; /* X dorada */
+    border: 2px solid #d4af37;
+    border-radius: 50%;
+    
+    /* Centrado perfecto de la X */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 2rem;
     cursor: pointer;
+    z-index: 10001;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background-color: #d4af37;
+    color: black;
+    transform: scale(1.1);
 }
 
 @keyframes zoomIn {
