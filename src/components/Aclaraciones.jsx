@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-//SEGUIR CON EL FAQ, ULTIMA AGREGADA: 118/143
+
 export default function Aclaraciones () {
     // 1. Estado para manejar qué pregunta está abierta
     const [abierta, setAbierta] = useState(null);
@@ -1156,7 +1156,7 @@ export default function Aclaraciones () {
             {/* NUEVA SECCIÓN: Buscador */}
             <section className="seccion-buscador">
                 <div className="contenedor-buscador">
-                    <div className="input-wrapper">
+                    <div className="input-wrapper-aclaraciones">
                         <input 
                             type="text" 
                             placeholder="Buscar duda por palabra clave..." 
@@ -1167,7 +1167,7 @@ export default function Aclaraciones () {
                         {/* Solo mostramos la X si hay algo escrito en 'busqueda' */}
                         {busqueda && (
                             <button 
-                                className="boton-limpiar" 
+                                className="boton-limpiar-aclaraciones" 
                                 onClick={() => setBusqueda("")}
                                 title="Limpiar búsqueda"
                             >

@@ -118,7 +118,7 @@
 }
 
 /* Contenedor para posicionar la X */
-.input-wrapper {
+.input-wrapper-aclaraciones {
     position: relative;
     max-width: 600px;
     margin: 0 auto;
@@ -139,7 +139,7 @@
 }
 
 /* Estilo del botón de cerrar */
-.boton-limpiar {
+.boton-limpiar-aclaraciones {
     position: absolute;
     right: 15px;
     background: none;
@@ -152,7 +152,7 @@
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.boton-limpiar:hover {
+.boton-limpiar-aclaraciones:hover {
     color: white;
     transform: scale(1.2);
 }

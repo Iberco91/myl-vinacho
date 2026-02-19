@@ -4,7 +4,8 @@ import Navbar from './components/Navbar';
 import Aclaraciones from './components/Aclaraciones';
 import Reproductor from './components/Reproductor';
 import ScrollToTop from './components/ScrollToTop';
-// Aquí importaremos tus páginas más adelante
+import InformacionCartas from './components/InformacionCartas';
+
 
 function App() {
   return (
@@ -209,8 +210,8 @@ function App() {
           <Route path="/champions" element={<></>} />
           <Route path="/licho" element={<></>} />
           <Route path="/carlicho" element={<></>} />
-          <Route path="/informacion-cartas" element={<></>} />
-          <Route path="/aclaraciones" element={<Aclaraciones />} />
+          <Route path="/informacion-cartas" element={<InformacionCartas/>} />
+          <Route path="/aclaraciones" element={<Aclaraciones/>} />
           <Route path="/otros" element={<></>} />
 
         </Routes>

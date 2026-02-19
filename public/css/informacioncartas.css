@@ -1,0 +1,258 @@
+/* Contenedor General */
+.cartas-page {
+  padding: 40px 20px;
+  color: white;
+  min-height: 100vh;
+}
+
+.cartas-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Buscador con estilo dorado */
+.buscador-cartas {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 30px;
+  border: 2px solid #d4af37;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 1.1rem;
+  outline: none;
+  margin-top: 20px;
+  transition: box-shadow 0.3s;
+}
+
+.buscador-cartas:focus {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.contador {
+  color: #d4af37;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Grid de Cartas */
+.cartas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjeta Individual */
+.carta-card {
+  display: flex; /* Imagen izquierda, texto derecha */
+  background: linear-gradient(145deg, #1a1a1a, #000000);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.carta-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+/* Contenedor Imagen */
+.carta-imagen-container {
+  width: 180px;
+  flex-shrink: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta-imagen-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Contenedor Texto */
+.carta-detalles {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carta-detalles h3 {
+  margin: 0 0 15px 0;
+  color: #d4af37;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 5px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.label {
+  color: #888;
+  font-weight: bold;
+}
+
+.valor {
+  color: #fff;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+  .carta-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carta-imagen-container {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Para la X para limpiar el buscador */
+/* El contenedor que envuelve al input y al botón */
+.input-wrapper-informacioncartas {
+    position: relative; /* ¡Esto es lo que mantiene a la X adentro! */
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+/* El estilo de la caja de búsqueda */
+.buscador-cartas {
+    width: 100%;
+    padding: 12px 45px 12px 15px; /* 45px a la derecha para que el texto no toque la X */
+    font-size: 1rem;
+    border: 2px solid #d4af37;
+    border-radius: 25px;
+    background-color: #1a1a1a;
+    color: white;
+    outline: none;
+    box-sizing: border-box; /* Esto evita que el input se salga del contenedor */
+}
+
+/* El botón de la X */
+.boton-limpiar-informacioncartas {
+    position: absolute;
+    right: 15px;      /* Distancia desde el borde derecho */
+    top: 50%;         /* Baja al centro */
+    transform: translateY(-15%); /* Centrado vertical perfecto */
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, transform 0.2s;
+    z-index: 10; /* Asegura que el botón esté sobre el input */
+}
+
+/* MODAL DEL POPUP PARA QUE LAS CARTAS TENGAN EL ZOOM */
+/* 1. Fondo oscuro que bloquea el resto de la página */
+.modal-overlay {
+    position: fixed; /* Crucial: para que no se mueva al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Siempre encima de todo */
+    cursor: pointer;
+    backdrop-filter: blur(5px); /* Efecto pro de desenfoque */
+}
+
+/* 2. Contenedor de la carta gigante */
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: zoomIn 0.3s ease-out;
+}
+
+/* 3. La imagen de la carta en grande */
+.modal-content img {
+    max-height: 80vh; /* Ocupa el 80% del alto de la pantalla máximo */
+    max-width: 90vw;  /* Ocupa el 90% del ancho máximo */
+    object-fit: contain; /* No se deforma */
+    border: 3px solid #d4af37;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+}
+
+/* 4. Texto debajo de la imagen grande */
+.modal-info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.modal-info h3 {
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+/* 5. Botón de cerrar (X) */
+.modal-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.img-carta {
+    width: 100%;
+    height: 100%;
+    /* 'cover' hará que la imagen llene todo el contenedor. 
+       Si prefieres que no se corte nada, usa 'contain' pero sube el scale */
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Si notas que las locales siguen pequeñas, podemos forzar un zoom suave */
+.carta-card:hover .img-carta {
+    transform: scale(1.05);
+}
+
+.carta-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.carta-card:hover {
+    transform: translateY(-5px); /* Se levanta un poquito */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Sombra elegante */
+    border-color: #d4af37; /* El borde brilla en dorado */
+    filter: brightness(1.05); /* Brillo sutil */
+}
