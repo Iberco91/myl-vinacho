@@ -43,7 +43,7 @@
     border: 1px solid #d4af37;
     border-radius: 8px;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0);
 }
 
 .boton-pregunta {

@@ -4,6 +4,9 @@ import datosCartas from './BBDDMyL.json';
 
 export default function InformacionCartas() {
     const [busqueda, setBusqueda] = useState("");
+    const [filtroEdicion, setFiltroEdicion] = useState([]);
+    const [filtroTipo, setFiltroTipo] = useState([]);
+    const [filtroRareza, setFiltroRareza] = useState([]);
 
     const [cartaSeleccionada, setCartaSeleccionada] = useState(null);
 
@@ -20,19 +23,32 @@ export default function InformacionCartas() {
     
     // Filtramos por Nombre_carta (Columna A del Excel original)
     const cartasFiltradas = datosCartas.filter(carta => {
-        // .replace(/\s+/g, ' ') es la magia: 
-        // Busca uno o más espacios en blanco (\s+) y los cambia por uno solo (' ')
-        const nombreCartaLimpio = carta.Nombre_carta
-            .toLowerCase()
-            .replace(/\s+/g, ' ') 
-            .trim();
+        // 1. Limpieza para el buscador de nombre (esto ya lo tenías bien)
+        const nombreCartaLimpio = (carta.Nombre_carta || "").toLowerCase().replace(/\s+/g, ' ').trim();
+        const textoBuscadoLimpio = busqueda.toLowerCase().replace(/\s+/g, ' ');
+        const cumpleNombre = nombreCartaLimpio.includes(textoBuscadoLimpio);
+        
+        // 2. Filtros con limpieza (.trim() elimina los espacios invisibles del Excel)
+        // Usamos (carta.Campo || "").trim() por si alguna celda viene vacía
+        const cumpleEdicion = filtroEdicion.length === 0 || 
+            filtroEdicion.includes((carta.Edicion_carta || "").trim());
 
-        const textoBuscadoLimpio = busqueda
-            .toLowerCase()
-            .replace(/\s+/g, ' ');
+        const cumpleTipo = filtroTipo.length === 0 || 
+            filtroTipo.includes((carta.Tipo_carta || "").trim());
 
-        return nombreCartaLimpio.includes(textoBuscadoLimpio);
+        const cumpleRareza = filtroRareza.length === 0 || 
+            filtroRareza.includes((carta.Rareza_carta || "").trim());
+
+        return cumpleNombre && cumpleEdicion && cumpleTipo && cumpleRareza;
     });
+
+    const toggleFiltro = (valor, estado, setEstado) => {
+        if (estado.includes(valor)) {
+            setEstado(estado.filter(item => item !== valor));
+        } else {
+            setEstado([...estado, valor]);
+        }
+    };
 
     return (
         <div className="cartas-page">
@@ -57,6 +73,48 @@ export default function InformacionCartas() {
                             title="Limpiar búsqueda"
                         >
                             &times;
+                        </button>
+                    )}
+                </div>
+                <div className="filtros-creativos">
+                    {/* GRUPO EDICIÓN */}
+                    <div className="grupo-filtros">
+                        <p>Ediciones:</p>
+                        {["Espada Sagrada", "Helénica", "Hijos de Daana", "Dominios de Ra"].map(ed => (
+                            <button key={ed} className={`boton-filtro ${filtroEdicion.includes(ed) ? 'activo' : ''}`}
+                                onClick={() => toggleFiltro(ed, filtroEdicion, setFiltroEdicion)}>{ed}</button>
+                        ))}
+                    </div>
+
+                    {/* GRUPO TIPO */}
+                    <div className="grupo-filtros">
+                        <p>Tipos:</p>
+                        {["Aliado", "Arma", "Oro", "Talismán", "Tótem"].map(t => (
+                            <button key={t} className={`boton-filtro ${filtroTipo.includes(t) ? 'activo' : ''}`}
+                                onClick={() => toggleFiltro(t, filtroTipo, setFiltroTipo)}>{t}</button>
+                        ))}
+                    </div>
+
+                    {/* GRUPO RAREZA */}
+                    <div className="grupo-filtros">
+                        <p>Rarezas:</p>
+                        {["Cortesano", "Promocional", "Real", "Rework", "Vasallo"].map(r => (
+                            <button key={r} className={`boton-filtro ${filtroRareza.includes(r) ? 'activo' : ''}`}
+                                onClick={() => toggleFiltro(r, filtroRareza, setFiltroRareza)}>{r}</button>
+                        ))}
+                    </div>
+                    {/* BOTÓN LIMPIAR FILTROS (Solo aparece si hay algo seleccionado) */}
+                    {(filtroEdicion.length > 0 || filtroTipo.length > 0 || filtroRareza.length > 0 || busqueda !== "") && (
+                        <button 
+                            className="boton-limpiar-todo"
+                            onClick={() => {
+                                setFiltroEdicion([]);
+                                setFiltroTipo([]);
+                                setFiltroRareza([]);
+                                setBusqueda("");
+                            }}
+                        >
+                            Limpiar Filtros &times;
                         </button>
                     )}
                 </div>

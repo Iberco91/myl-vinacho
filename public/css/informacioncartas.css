@@ -277,3 +277,117 @@
     border-color: #d4af37; /* El borde brilla en dorado */
     filter: brightness(1.05); /* Brillo sutil */
 }
+
+
+/* --- CONTENEDOR PRINCIPAL DE FILTROS --- */
+.filtros-creativos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    background-color: rgba(42, 78, 55, 0); /* Un verde muy tenue para agrupar visualmente */
+    border-radius: 15px;
+    backdrop-filter: none;
+}
+
+/* --- GRUPOS INDIVIDUALES (Edición, Tipo, Rareza) --- */
+.grupo-filtros {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título de cada grupo (Ediciones:, Tipos:, etc.) */
+.grupo-filtros p {
+    font-weight: bold;
+    color: #ffcc00d3; /* Color dorado para los títulos */
+    margin-right: 10px;
+    min-width: 90px;
+    text-align: right;
+}
+
+/* --- ESTILO DE LOS BOTONES (PILLS) --- */
+.boton-filtro {
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    border: 1px solid #d4af37;     /* Borde dorado */
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* BOTON PARA ELIMINAR FILTROS SELECCIONADOS */
+.boton-limpiar-todo {
+    /* Mismo diseño que .boton-filtro */
+    background: rgba(0, 0, 0, 0.6); 
+    border: 1px solid #ff4444; /* Borde rojo en lugar de dorado */
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    margin-top: 15px; /* Espacio para que no choque con los filtros */
+}
+
+/* Efecto Hover: Se ilumina en rojo sutil */
+.boton-limpiar-todo:hover {
+    background: rgba(255, 68, 68, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+}
+
+/* Efecto Active: Cuando se presiona */
+.boton-limpiar-todo:active {
+    background: #ff4444;
+    color: white;
+    transform: scale(0.95);
+}
+
+
+/* Efecto Hover (al pasar el mouse) */
+.boton-filtro:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
+}
+
+/* --- ESTADO ACTIVO (Cuando el filtro está seleccionado) --- */
+.boton-filtro.activo {
+    background: #d4af37; /* Fondo dorado sólido */
+    color: black;        /* Texto negro para contraste */
+    font-weight: bold;
+    box-shadow: 0 0 15px #d4af37; /* Resplandor dorado */
+    border-color: white;
+}
+
+/* --- CONTADOR DE CARTAS --- */
+.contador {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #f5dada;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* --- RESPONSIVO PARA CELULARES --- */
+@media (max-width: 600px) {
+    .grupo-filtros p {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    .boton-filtro {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}

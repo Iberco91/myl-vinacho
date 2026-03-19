@@ -45,7 +45,7 @@
   "Edicion_carta": "Hijos de Daana",
   "Habilidad_carta": 0,
   "Tipo_carta": " Aliado",
-  "Rareza_carta": "Real",
+  "Rareza_carta": "Cortesano",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/161-AHD-Aed-Finn-MazosCL.png"
  },
  {
@@ -85,7 +85,7 @@
   "Edicion_carta": "Hijos de Daana",
   "Habilidad_carta": 0,
   "Tipo_carta": " Aliado",
-  "Rareza_carta": "Real",
+  "Rareza_carta": "Cortesano",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/154-AHD-Aife-MazosCL.png"
  },
  {
@@ -269,7 +269,7 @@
   "Edicion_carta": "Hijos de Daana",
   "Habilidad_carta": 0,
   "Tipo_carta": " Aliado",
-  "Rareza_carta": "Real",
+  "Rareza_carta": "Vasallo",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/155-AHD-Ashrays-MazosCL.png"
  },
  {
@@ -421,7 +421,7 @@
   "Edicion_carta": "Hijos de Daana",
   "Habilidad_carta": 0,
   "Tipo_carta": " Aliado",
-  "Rareza_carta": "Real",
+  "Rareza_carta": "Cortesano",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/158-AHD-Bocan-MazosCL.png"
  },
  {
@@ -485,7 +485,7 @@
   "Edicion_carta": "Hijos de Daana",
   "Habilidad_carta": 0,
   "Tipo_carta": " Aliado",
-  "Rareza_carta": "Real",
+  "Rareza_carta": "Vasallo",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/162-AHD-Bran-el-Bendito-MazosCL.png"
  },
  {
@@ -1093,7 +1093,7 @@
   "Edicion_carta": "Hijos de Daana",
   "Habilidad_carta": 0,
   "Tipo_carta": " Oro",
-  "Rareza_carta": "Real",
+  "Rareza_carta": "Cortesano",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/174-AHD-Defensores-Celtas-MazosCL.png"
  },
  {
@@ -3509,7 +3509,7 @@
   "Edicion_carta": "Hijos de Daana",
   "Habilidad_carta": 0,
   "Tipo_carta": "Tótem",
-  "Rareza_carta": "Real",
+  "Rareza_carta": "Vasallo",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/19-Leyendas3PB\/cartas\/177-LPB23-Totem-de-la-serpiente-MazosCL.png"
  },
  {
@@ -3829,7 +3829,7 @@
   "Edicion_carta": "Helénica",
   "Habilidad_carta": "Anula un Tótem.",
   "Tipo_carta": "Talismán",
-  "Rareza_carta": "Real",
+  "Rareza_carta": "Cortesano",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/15-AniversarioHE\/cartas\/133-AHE-Raza-de-Pigmeos-MazosCL.png"
  },
  {
@@ -6732,7 +6732,7 @@
   "Nombre_carta": "Rhongomiant",
   "Edicion_carta": "Espada Sagrada",
   "Habilidad_carta": "El portador de Rhongomiant gana 1 a la fuerza. Si el portador de Rhongomiant hace daño de combate al Mazo Castillo oponente, puedes barajar un Tótem oponente en juego o barajar una carta de tu Cementerio en tu Mazo Castillo.",
-  "Tipo_carta": " Oro",
+  "Tipo_carta": " Arma",
   "Rareza_carta": "Vasallo",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/12-AniversarioES\/cartas\/253-Rhongomiant-MazosCL.png"
  },
@@ -12845,7 +12845,7 @@
   "Edicion_carta": "Helénica",
   "Habilidad_carta": "Un Aliado oponente en juego pasa a tu Línea de Defensa y al final del turno debe ser destruido.",
   "Tipo_carta": "Talismán",
-  "Rareza_carta": "Cortesano",
+  "Rareza_carta": "Rework",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/03-Helenica\/cartas\/Antropofagos-cortesano.png-1762836227288"
  },
  {

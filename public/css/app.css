@@ -15,7 +15,9 @@ a {
 
 /*Estilos que quieres que hereden todas las páginas */
 html, body {
-  background-color: rgb(42, 78, 55); /* Tu verde oscuro solo aquí */
+  background-image: url('/ImagenesMyLvsc/dragonesfondo.jpg'); /* Asegúrate de que la ruta sea correcta */
+  background-size: 1500px; /* Ajusta este número según qué tan grande quieras que se vea cada dragón */
+  background-attachment: fixed; /* Opcional: El fondo se queda quieto mientras haces scroll (efecto pro) */
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -30,12 +32,18 @@ html, body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgb(42, 78, 55);
     width: 100%;
+    background-color: rgb(42, 78, 55); 
+    background-image: url('/ImagenesMyLvsc/dragonesfondo.jpg');
+    background-size: 1500px;
+    background-attachment: fixed; /* Esto hace que la imagen del header calce perfecto con la del body */
+    
+    box-shadow: none;
+
 }
 
 header {
-  background-color: rgb(42, 78, 55);
+  background-color: transparent;
   display: flex;             /* Convierte el header en un contenedor flexible */
   justify-content: space-between; /* Empuja las imágenes a los extremos y el h1 al centro */
   align-items: center;       /* Alinea perfectamente los tres elementos por su centro horizontal */
@@ -43,7 +51,7 @@ header {
 }
 
 aside {
-  background-color: rgb(42, 78, 55); /* También debe tener fondo */
+  background-color: rgba(42, 78, 55, 0.05);
   display: block;
 }
 
@@ -70,9 +78,11 @@ h1 {
   list-style: none;          /* Quita los puntos */
   gap: 30px;                 /* Espacio entre cada opción */
   padding: 20px 0;
+  background-color: rgba(42, 78, 55, 0.05);
 }
 
 nav ul li {
+
     color: white;
     font-weight: bold;
     text-transform: uppercase; /* Se ve más profesional en menús */
