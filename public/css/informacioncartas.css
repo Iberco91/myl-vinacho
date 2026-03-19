@@ -382,14 +382,13 @@
 @media (max-width: 600px) {
   /* --- FILTROS RESPONSIVOS (VERSIÓN ORIGINAL) --- */
   .grupo-filtros {
-      display: flex;
-      flex-wrap: nowrap; /* Fuerza una sola línea */
-      gap: 12px;
-      overflow-x: auto;  /* Habilita el scroll lateral con el dedo */
-      align-items: center;
-      padding: 10px 5px;
-      width: 100%;
-      -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+        display: flex;
+        flex-wrap: nowrap; /* Impide que bajen */
+        overflow-x: auto;  /* Permite scroll lateral */
+        justify-content: flex-start; /* Alinea a la izquierda */
+        width: 100%;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch; /* Scroll suave en iPhone */
   }
 
   /* Estilo para los títulos (Ediciones, Tipos, etc.) */
@@ -401,14 +400,8 @@
       flex-shrink: 0;      /* Evita que el título se achique */
   }
 
-  /* LA SOLUCIÓN: El primer botón de cada grupo empuja al resto */
-  .grupo-filtros button:first-of-type {
-      margin-left: 10px; /* Espacio extra para que no nazca debajo del título */
-  }
 
   .boton-filtro {
       flex-shrink: 0;      /* Vital: evita que los botones se "aplasten" para caber */
-      padding: 6px 15px;
-      white-space: nowrap;
   }
 }
