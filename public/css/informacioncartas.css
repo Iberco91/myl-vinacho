@@ -380,14 +380,17 @@
 
 /* --- RESPONSIVO PARA CELULARES --- */
 @media (max-width: 600px) {
-    .grupo-filtros p {
+    .grupo-filtros {
+        display: flex;
+        flex-wrap: nowrap; /* Impide que bajen */
+        overflow-x: auto;  /* Permite scroll lateral */
+        justify-content: flex-start; /* Alinea a la izquierda */
         width: 100%;
-        text-align: center;
-        margin-bottom: 5px;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch; /* Scroll suave en iPhone */
     }
     
     .boton-filtro {
-        font-size: 0.8rem;
-        padding: 5px 10px;
+        flex-shrink: 0; /* Evita que los botones se achiquen para caber */
     }
 }
