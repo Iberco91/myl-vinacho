@@ -194,24 +194,28 @@ footer li {
     /* ICONO HAMBURGUESA: Lo hacemos aparecer solo aquí */
     .hamburger {
         display: block !important;
-        position: relative;
-        z-index: 2001; /* Por encima de todo */
-        margin-right: 20px;
+        position: absolute; /* Cambiamos a absolute para posicionarlo mejor */
+        top: 20px;          /* Más arriba */
+        right: 20px;        /* Más a la derecha */
+        z-index: 2001;
+        cursor: pointer;
+        padding: 10px;      /* Área de toque más grande */
     }
 
     .hamburger span {
         display: block;
-        width: 25px;
-        height: 3px;
+        width: 35px;        /* Más ancho (antes 25px) */
+        height: 4px;        /* Más grueso (antes 3px) */
         background: #d4af37;
-        margin: 5px;
+        margin: 6px;        /* Más espacio entre barritas */
         transition: 0.4s;
+        border-radius: 2px;
     }
 
-    /* Transformación a X */
-    .hamburger.open span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+    /* Ajuste de la X para el nuevo tamaño */
+    .hamburger.open span:nth-child(1) { transform: rotate(-45deg) translate(-7px, 7px); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+    .hamburger.open span:nth-child(3) { transform: rotate(45deg) translate(-7px, -7px); }
 
     /* SECCIONES: Ahora es un menú lateral */
     .secciones {
