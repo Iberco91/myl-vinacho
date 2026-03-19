@@ -380,27 +380,25 @@
 
 /* --- RESPONSIVO PARA CELULARES --- */
 @media (max-width: 600px) {
-  /* Aseguramos que el contenedor tenga espacio relativo */
+  /* --- FILTROS RESPONSIVOS (VERSIÓN ORIGINAL) --- */
   .grupo-filtros {
       display: flex;
+      flex-wrap: nowrap; /* Fuerza una sola línea */
       gap: 12px;
-      flex-wrap: nowrap;
-      overflow-x: auto;
+      overflow-x: auto;  /* Habilita el scroll lateral con el dedo */
       align-items: center;
       padding: 10px 5px;
-      position: relative; /* Importante */
+      width: 100%;
+      -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
   }
 
-  /* El título sticky */
+  /* Estilo para los títulos (Ediciones, Tipos, etc.) */
   .grupo-filtros p {
-      position: sticky;
-      left: 0;
-      z-index: 20;
-      min-width: 100px; /* Ajusta este ancho si tus títulos son más largos */
-      background: #0a190f; /* Color sólido de tu fondo para tapar los botones al pasar */
-      margin: 0;
-      padding-right: 15px;
       font-weight: bold;
+      color: #ffcc00d3;
+      margin-right: 10px;
+      white-space: nowrap; /* Evita que el título se rompa en dos líneas */
+      flex-shrink: 0;      /* Evita que el título se achique */
   }
 
   /* LA SOLUCIÓN: El primer botón de cada grupo empuja al resto */
@@ -409,6 +407,8 @@
   }
 
   .boton-filtro {
-      flex-shrink: 0; /* Evita que los botones se achiquen para caber */
+      flex-shrink: 0;      /* Vital: evita que los botones se "aplasten" para caber */
+      padding: 6px 15px;
+      white-space: nowrap;
   }
 }
