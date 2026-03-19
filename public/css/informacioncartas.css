@@ -380,30 +380,32 @@
 
 /* --- RESPONSIVO PARA CELULARES --- */
 @media (max-width: 600px) {
+  /* Aseguramos que el contenedor tenga espacio relativo */
   .grupo-filtros {
       display: flex;
-      gap: 10px;
-      flex-wrap: nowrap; /* Para que sea scroll horizontal en móvil */
+      gap: 12px;
+      flex-wrap: nowrap;
       overflow-x: auto;
       align-items: center;
       padding: 10px 5px;
-      width: 100%;
-      -webkit-overflow-scrolling: touch;
+      position: relative; /* Importante */
   }
 
+  /* El título sticky */
   .grupo-filtros p {
-      font-weight: bold;
-      color: #ffcc00d3;
-      margin-right: 15px;
-      min-width: 90px;
-      text-align: left;
-      
-      /* Esto lo deja fijo al scrollear hacia los lados */
       position: sticky;
       left: 0;
-      background: rgba(10, 25, 15, 0.9); /* Fondo sólido para que no se traslapen los botones */
-      padding-right: 10px;
-      z-index: 10;
+      z-index: 20;
+      min-width: 100px; /* Ajusta este ancho si tus títulos son más largos */
+      background: #0a190f; /* Color sólido de tu fondo para tapar los botones al pasar */
+      margin: 0;
+      padding-right: 15px;
+      font-weight: bold;
+  }
+
+  /* LA SOLUCIÓN: El primer botón de cada grupo empuja al resto */
+  .grupo-filtros button:first-of-type {
+      margin-left: 10px; /* Espacio extra para que no nazca debajo del título */
   }
 
   .boton-filtro {
