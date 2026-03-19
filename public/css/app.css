@@ -159,25 +159,23 @@ footer li {
 
 
 
-/* 5. MEDIA QUERIES GLOBALES (Solo de Header y Nav) */
-
 /* --- 1. TABLETS Y PANTALLAS PLEGABLES (1100px hacia abajo) --- */
-/* Esto cubre iPad Air, Asus Zenbook Fold y laptops pequeñas */
 @media (max-width: 1100px) {
+    /* Mantenemos tus reglas de notebook/tablet pequeño */
     .secciones {
         flex-wrap: wrap; 
         justify-content: center;
         gap: 12px; 
         padding: 10px;
         width: 100%;
+        display: flex; /* Aseguramos que se vea normal en tablets */
     }
 
     nav ul li {
-        font-size: 1rem; /* Letra más pequeña para que quepa en dos filas */
+        font-size: 1rem;
     }
 
     h1 {
-        /* Tamaño fluido: mínimo 1.8rem, máximo 3.5rem */
         font-size: clamp(1.8rem, 6vw, 3.5rem) !important;
         margin-bottom: 20px;
         padding: 0 15px;
@@ -186,61 +184,95 @@ footer li {
 
 /* --- 2. MONITORES PEQUEÑOS/TABLETS (900px hacia abajo) --- */
 @media (max-width: 900px) {
-  footer {
-  text-align: center;
-  } 
+    footer {
+        text-align: center;
+    } 
 }
 
-/* --- 3. CELULARES (768px hacia abajo) --- */
+/* --- 3. CELULARES (768px hacia abajo) - AQUÍ ESTÁ EL CAMBIO CLAVE --- */
 @media (max-width: 768px) {
-/* 1. La imagen izquierda: La mantenemos visible y fija */
+    /* ICONO HAMBURGUESA: Lo hacemos aparecer solo aquí */
+    .hamburger {
+        display: block !important;
+        position: relative;
+        z-index: 2001; /* Por encima de todo */
+        margin-right: 20px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #d4af37;
+        margin: 5px;
+        transition: 0.4s;
+    }
+
+    /* Transformación a X */
+    .hamburger.open span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+
+    /* SECCIONES: Ahora es un menú lateral */
+    .secciones {
+        position: fixed !important;
+        right: -100% !important; /* Escondido */
+        top: 0;
+        flex-direction: column !important;
+        background: rgba(10, 25, 15, 0.98) !important; /* Fondo oscuro sólido */
+        width: 70% !important;
+        height: 100vh !important;
+        justify-content: center !important;
+        align-items: center !important;
+        transition: 0.5s ease-in-out;
+        z-index: 2000;
+        box-shadow: -10px 0 20px rgba(0,0,0,0.8);
+        gap: 25px !important; /* Más espacio entre links en el móvil */
+    }
+
+    /* Cuando el menú está activo */
+    .secciones.active {
+        right: 0 !important;
+    }
+
+    /* Estilo de los links en el menú móvil */
+    .secciones li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 1.3rem !important;
+        display: block;
+        padding: 10px;
+    }
+
+    /* --- MANTENEMOS TU DISEÑO DE HEADER ORIGINAL --- */
+    header {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between;
+        align-items: center;
+        width: 100% !important;
+        padding: 10px 15px;
+    }
+
     header .imagenes-titulo:first-of-type {
         display: block !important;
         width: 60px; 
-        height: auto;
-        margin: 0;
     }
 
     header .imagenes-titulo:last-of-type {
         visibility: hidden !important; 
-        width: 60px; /* Mismo ancho que la izquierda para equilibrar */
-        height: auto;
-        margin: 0;
-    }
-
-    /* AJUSTE HEADER: Centramos la imagen izquierda y el título */
-    header {
-            display: flex !important;
-            flex-direction: row !important;
-            justify-content: space-between; /* Empuja imagen e 'imagen fantasma' a los lados */
-            align-items: center;
-            width: 100% !important;
-            padding: 10px 15px;
-        }
-        
-    .imagenes-titulo {
-        width: 70px; /* Tamaño reducido para iPhone */
-        height: auto;
-        margin: 0;
+        width: 60px;
     }
 
     h1 {
-        font-size: 1.6rem !important; /* Título más compacto */
-        text-align: center;
+        font-size: 1.6rem !important;
         flex: 1;
-        margin: 0;
-        padding: 0 5px;
     }
 
-    /* MENÚ VERTICAL: Tu configuración original */
-    .secciones {
-        flex-direction: column !important;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 0;
-    }
-
-    /* GENERAL */
+    /* GENERAL (Para que el footer no se rompa) */
     footer, section {
         width: 100% !important;
         padding: 15px;
@@ -250,14 +282,10 @@ footer li {
 
 /* --- 4. CELULARES PEQUEÑOS (480px hacia abajo) --- */
 @media (max-width: 480px) {
-  .divs-imagenes {
-    width: 90% !important; 
-    margin: 0 auto;
-  }
-  .imag {
-      height: 280px; 
-  }
-  h1 {
-      font-size: 1.6rem !important; /* Un poco más pequeño para los más chiquitos */
-  }
+    .divs-imagenes {
+        width: 95% !important; 
+    }
+    .imag {
+        height: 250px; 
+    }
 }
