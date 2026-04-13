@@ -5,6 +5,7 @@ import Aclaraciones from './components/Aclaraciones';
 import Reproductor from './components/Reproductor';
 import ScrollToTop from './components/ScrollToTop';
 import InformacionCartas from './components/InformacionCartas';
+import BuscadorMazos from './components/BuscadorMazos';
 
 
 function App() {
@@ -43,16 +44,15 @@ function App() {
                       <span>Mazos.cl</span></a>
           </div>
         </section>
-
-
       
 
      <main>
         <Routes>
           <Route path="/" element={
             <>
-              <></>
-              <section className="imag-equipos">
+              <BuscadorMazos />
+
+              {/* <section className="imag-equipos">
                 <div className="divs-imagenes">
                   <h3>A Penales</h3>
                   <img className="imag" src="/ImagenesMyLvsc/apenales.jpeg" alt="A Penales" />
@@ -201,7 +201,7 @@ function App() {
                   <h3>Vladimir</h3>
                   <img className="imag" src="/ImagenesMyLvsc/vladimir.jpeg" alt="Vladimir" />
                 </div>
-              </section>
+              </section> */}
               <Reproductor />
             </>
           } />

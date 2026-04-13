@@ -1,0 +1,76 @@
+.contenedor-buscador-mazos {
+    width: 100%;
+    padding: 2px 0;
+}
+
+.caja-busqueda {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+
+.input-busqueda-mazos {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 2px solid #d4af37; /* Dorado MyL */
+    width: 100%;
+    max-width: 500px;
+    background-color: #0a190f; /* Verde oscuro del tema */
+    color: white;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.input-busqueda-mazos:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px #ffcc0066;
+    transform: translateY(-2px);
+}
+
+.sin-resultados {
+    /* Esto obliga al div a saltarse las reglas de la galería y ocupar todo el ancho */
+    grid-column: 1 / -1; 
+    flex: 0 0 100%; 
+    
+    text-align: center;
+    margin: 1px auto; /* Un poco de margen arriba para despegarlo del buscador */
+    color: #ffcc00;
+    font-style: italic;
+    display: block; /* Aseguramos que no se comporte como inline */
+}
+
+.sin-resultados p {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.boton-limpiar-mazos {
+    position: absolute;
+    right: 15px;      /* Distancia desde el borde derecho del input */
+    top: 50%; 
+    transform: translateY(-50%); /* Centrado vertical exacto */
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+}
+
+.boton-limpiar-mazos:hover {
+    color: #ffcc00;
+}
+
+.input-wrapper {
+    position: relative; 
+    width: 100%;
+    max-width: 500px; /* Debe ser igual al max-width del input */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
