@@ -18,12 +18,19 @@ export default function InformacionCartas() {
         "Mulvan el Dragon": "/Imagencartasfaltantes/Mulvaneldragon.webp",
         "Org Maestro de Dragones": "/Imagencartasfaltantes/Orgmaestrodedragones.jpg",
         "Poseidon Rey del Mar": "/Imagencartasfaltantes/Poseidonreydelmar.webp",
-        "Willowrong el Dragon": "/Imagencartasfaltantes/Willowrongeldragon.webp"
+        "Willowrong el Dragon": "/Imagencartasfaltantes/Willowrongeldragon.webp",
+        "Latigo y Baston": "/Imagencartasfaltantes/Latigoybaston.webp",
+        "Herrero": "/Imagencartasfaltantes/Herrero.png",
+        "Totem del Errante": "/Imagencartasfaltantes/Totemdelerrante.webp",
+        "Atenas": "/Imagencartasfaltantes/Atenas.webp",
+        "Crear Talisman": "/Imagencartasfaltantes/Creartalisman.webp",
+        "Carro Real": "/Imagencartasfaltantes/Carroreal.png"
+
     };
     
     // Filtramos por Nombre_carta (Columna A del Excel original)
     const cartasFiltradas = datosCartas.filter(carta => {
-        // 1. Limpieza para el buscador de nombre (esto ya lo tenías bien)
+        // 1. Limpieza para el buscador de nombre 
         const nombreCartaLimpio = (carta.Nombre_carta || "").toLowerCase().replace(/\s+/g, ' ').trim();
         const textoBuscadoLimpio = busqueda.toLowerCase().replace(/\s+/g, ' ');
         const cumpleNombre = nombreCartaLimpio.includes(textoBuscadoLimpio);
