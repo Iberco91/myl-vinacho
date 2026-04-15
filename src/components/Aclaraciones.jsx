@@ -1121,9 +1121,13 @@ export default function Aclaraciones () {
         {
         id: 135,
         pregunta: "Las cartas que tienen la habilidad: 'Cancela el ataque oponente', como Saqqara o Flechas de lava, en qué momento se usan? (FAQ)",
-        respuesta: "Las cartas con esta habilidad se usan al momento de declaración de ataque, funcionan de la misma manera que Siete contra Tebas ",
+        respuesta: "Las cartas con esta habilidad se usan al momento de declaración de ataque, funcionan de la misma manera que Siete contra Tebas. ",
         },
-
+        {
+        id: 136,
+        pregunta: "¿Se pueden anular Aliados con la carta Lobos de Zeus?",
+        respuesta: "No, no se pueden anular Aliados. La descripción de la carta se refiere a que se puede anular cualquier carta de coste 3 o mas, QUE NO SEA ALIADO. ",
+        },
 
     ];
 
