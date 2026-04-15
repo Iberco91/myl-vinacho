@@ -9929,14 +9929,6 @@
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/15-AniversarioHE\/cartas\/188-AHE-Ketos-MazosCL.png"
  },
  {
-  "Nombre_carta": "Templo de Isis",
-  "Edicion_carta": "Dominios de Ra",
-  "Habilidad_carta": "Mientras Mastabas esté en juego, los Aliados Imbloqueables en Línea de Ataque tienen fuerza 0.",
-  "Tipo_carta": "Tótem",
-  "Rareza_carta": "Vasallo",
-  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/07-Dominios-de-RA\/218.png"
- },
- {
   "Nombre_carta": "Menhir",
   "Edicion_carta": "Hijos de Daana",
   "Habilidad_carta": "Mientras Menhir esté en juego, si todos tus Aliados en juego son de raza Defensor, en la Fase Final puedes robar una carta extra.",
@@ -14589,6 +14581,102 @@
   "Edicion_carta": "Hijos de Daana",
   "Habilidad_carta": "#N\/A",
   "Tipo_carta": " Arma",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Desafiar a Arturo",
+  "Edicion_carta": "Espada Sagrada",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Talismán",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Galatine",
+  "Edicion_carta": "Espada Sagrada",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Arma",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Cinturon de Lady Ann",
+  "Edicion_carta": "Espada Sagrada",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Oro",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Robar el Vellocino",
+  "Edicion_carta": "Helénica",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Talismán",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Carro de Medea",
+  "Edicion_carta": "Helénica",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Arma",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Diente de la Bestia",
+  "Edicion_carta": "Helénica",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Oro",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Magia Amatista",
+  "Edicion_carta": "Hijos de Daana",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Talismán",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Loch Lein",
+  "Edicion_carta": "Hijos de Daana",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Tótem",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Torc Fianna",
+  "Edicion_carta": "Hijos de Daana",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Oro",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Nombre de Ra",
+  "Edicion_carta": "Dominios de Ra",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Talismán",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Templo de Isis",
+  "Edicion_carta": "Dominios de Ra",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Tótem",
+  "Rareza_carta": "Real",
+  "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
+ },
+ {
+  "Nombre_carta": "Nudo de Isis",
+  "Edicion_carta": "Dominios de Ra",
+  "Habilidad_carta": "#N\/A",
+  "Tipo_carta": "Oro",
   "Rareza_carta": "Real",
   "Imagen_carta": "https:\/\/cdn.mazos.cl\/PRIMER_BLOQUE\/20-AniversarioHD\/cartas\/147-AHD-Yelmo-Carnivoro-MazosCL.png"
  }

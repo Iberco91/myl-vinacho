@@ -24,7 +24,20 @@ export default function InformacionCartas() {
         "Totem del Errante": "/Imagencartasfaltantes/Totemdelerrante.webp",
         "Atenas": "/Imagencartasfaltantes/Atenas.webp",
         "Crear Talisman": "/Imagencartasfaltantes/Creartalisman.webp",
-        "Carro Real": "/Imagencartasfaltantes/Carroreal.png"
+        "Carro Real": "/Imagencartasfaltantes/Carroreal.png",
+        "Desafiar a Arturo": "/Imagencartasfaltantes/Desafiaraarturo.png",
+        "Galatine": "/Imagencartasfaltantes/Galatine.png",
+        "Cinturon de Lady Ann": "/Imagencartasfaltantes/Cinturondeladyann.png",
+        "Robar el Vellocino": "/Imagencartasfaltantes/Robarelvellocino.webp",
+        "Carro de Medea": "/Imagencartasfaltantes/Carrodemedea.webp",
+        "Diente de la Bestia": "/Imagencartasfaltantes/Dientedelabestia.webp",
+        "Magia Amatista": "/Imagencartasfaltantes/Magiaamatista.png",
+        "Loch Lein": "/Imagencartasfaltantes/Lochlein.png",
+        "Torc Fianna": "/Imagencartasfaltantes/Torcfianna.png",
+        "Nombre de Ra": "/Imagencartasfaltantes/Nombredera.webp",
+        "Templo de Isis": "/Imagencartasfaltantes/Templodeisis.webp",
+        "Nudo de Isis": "/Imagencartasfaltantes/Nudodeisis.png",
+
 
     };
     
