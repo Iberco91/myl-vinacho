@@ -3,9 +3,9 @@ import { useState } from 'react';
 
 
 export default function Aclaraciones () {
-    // 1. Estado para manejar qué pregunta está abierta
+    // 1. Estado para manejar qué pregunta está abierta, el efecto acordeón
     const [abierta, setAbierta] = useState(null);
-    // 2: Estado para el texto del buscador
+    // 2: Estado para el texto del buscador, cada vez que el usuario escribe una letra, React dibuja nuevamente
     const [busqueda, setBusqueda] = useState("");
     // 3. Tus datos (Aquí puedes ir agregando más preguntas y respuestas)
     const listaDudas = [
@@ -1127,6 +1127,16 @@ export default function Aclaraciones () {
         id: 136,
         pregunta: "¿Se pueden anular Aliados con la carta Lobos de Zeus?",
         respuesta: "No, no se pueden anular Aliados. La descripción de la carta se refiere a que se puede anular cualquier carta de coste 3 o mas, QUE NO SEA ALIADO. ",
+        },
+        {
+        id: 137,
+        pregunta: "¿Se puede usar Desafiar a Arturo para cancelar la habilidad de una carta que esta entrando en juego?",
+        respuesta: "Si, cuando dice cancelar es en respuesta a la acción que se quiere cancelar. ",
+        },
+        {
+        id: 138,
+        pregunta: "¿Se deben pagar dos Oros adicionales al usar Ma Arrat-Numan, Qadesh o Rayos contra Demoledor de Amon?",
+        respuesta: "Si, siempre se deben pagar los 2 oros adicionales, ya que la carta está siendo afectada por dichos talismanes. ",
         },
 
     ];
